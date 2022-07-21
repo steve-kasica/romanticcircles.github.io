@@ -1,11 +1,23 @@
-- title: Getting Started
+- title: RC Handbook
   docs:
   - home
+  - introduction
+  - rc-position-descriptions
+  - tech stack
   - themes
   - customization
 
-- title: Examples
+- title: Production Documentation
   docs:
+  - drupal-guide
+  - copy editing guide
+  - TEI coding guide
+  - digital publishing guide
   - cheatsheet
   - font-awesome
   - bootstrap
+
+- title: Contributor Resources
+  docs:
+  - rc-house-style
+  - publication guide 
