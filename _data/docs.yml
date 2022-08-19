@@ -2,25 +2,28 @@ toc:
   - title: RC Handbook
     docs:
       - page: home
+        subsection:
+          - page: yeeee
       - page: introduction
       - page: rc-position-descriptions
+        url: rc-position-descriptions.html
       - page: tech-stack
       - page: themes
       - page: customization
 
   - title: Production Documentation
     docs:
-    - page: drupal-guide
-    - page: copy editing guide
-    - page: TEI coding guide
-    - page: digital publishing guide
-    - page: cheatsheet
-    - page: font-awesome
-      subsection:
-        - page: test
-    - page: bootstrap
+      - page: drupal-guide
+      - page: copy editing guide
+      - page: TEI coding guide
+      - page: digital publishing guide
+      - page: cheatsheet
+      - page: font-awesome
+        subsection:
+          - page: test
+      - page: bootstrap
 
   - title: Contributor Resources
     docs:
-    - page: rc-house-style
-    - page: publication guide 
+      - page: rc-house-style
+      - page: publication guide 
