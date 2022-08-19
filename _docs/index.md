@@ -1,12 +1,10 @@
 ---
-title: RC Handbook
+title: Home
 permalink: /docs/home/
 redirect_from: /docs/index.html
 ---
 
 ## About Romantic Circles
-
-`test edit from pc`
 
 ### Site history and overview
 
