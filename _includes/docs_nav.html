@@ -32,7 +32,7 @@
             {% assign item_url = subitem.page | prepend:"/docs/" | append:"/" %}
             {% assign p = site.docs | where:"url", item_url | first %}
             <ul>
-              <a class="list-group-item {% if item_url == page.url %}active{% endif %}" href="{{ p.url  | relative_url }}">{{ p.title }}</a>
+              <a class="list-group-subitem {% if item_url == page.url %}active{% endif %}" href="{{ p.url  | relative_url }}">{{ p.title }}</a>
             </ul>
            {% endfor %}
           {% endfor %}

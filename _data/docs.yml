@@ -21,6 +21,8 @@ toc:
       - page: font-awesome
         subsection:
           - page: test
+          - page: tech-stack
+          - page: rc-house-style
       - page: bootstrap
 
   - title: Contributor Resources
