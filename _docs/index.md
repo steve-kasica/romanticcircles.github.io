@@ -7,6 +7,7 @@ redirect_from: /docs/index.html
 ## About Romantic Circles
 
 `test edit from pc`
+`test edit from rc machine`
 
 ### Site history and overview
 
