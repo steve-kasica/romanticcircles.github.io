@@ -34,7 +34,7 @@ lang: en-US
 #theme: minima
 # theme options from https://bootswatch.com/3/
 # comment out this to use default Bootstrap
-bootwatch: darkly # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
+bootwatch: superhero # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
 
 # Build settings
 markdown: kramdown
