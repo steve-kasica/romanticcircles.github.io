@@ -4,19 +4,17 @@ permalink: /docs/rc-position-descriptions/
 ---
 
 ## RC Tech Positions Overview
- 
-### Assistant Editor / Project Manager
- 
-RC Assistant Editors are responsible for the day-to-day operation and maintenance of the site’s Drupal environments, infrastructure, and appearance; coordination of RC initiatives and publications, including regular communication with the general editors, section editors, and contributors, as well as managing RC’s PR and social media presence; facilitating and implementing all stages of the digital publication process for RC Praxis, Editions, Unbound, and Pedagogies volumes, including copy editing, TEI encoding, layout and design, proofing, and publication; researching and implementing best practices for DH and leveraging metadata; training and management of RC interns and future Technical Editors at CU, including maintenance of RC’s tech handbook; and other duties to be assigned by the general editors.
- 
 
+### Assistant Editor / Project Manager
+
+RC Assistant Editors are responsible for the day-to-day operation and maintenance of the site’s Drupal environments, infrastructure, and appearance; coordination of RC initiatives and publications, including regular communication with the general editors, section editors, and contributors, as well as managing RC’s PR and social media presence; facilitating and implementing all stages of the digital publication process for RC Praxis, Editions, Unbound, and Pedagogies volumes, including copy editing, TEI encoding, layout and design, proofing, and publication; researching and implementing best practices for DH and leveraging metadata; training and management of RC interns and future Technical Editors at CU, including maintenance of RC’s tech handbook; and other duties to be assigned by the general editors.
 
 ### Individual Contributors
- 
+
 ## General Workflow
 
 ### Distributing workflow and load
- 
+
 There is, and likely will continue to be, an ever-present tension between RC production aspirations and the various editors’ hoped-for production schedules, on the one hand, and site maintenance, innovation, new initiatives, DH best practices, and—perhaps most importantly—staff training, on the other. On some level, RC’s student assistantships and internships are intended to provide a DH learning sandbox for early career scholars to find a sure footing in the field, but these needs and desires must, of course, be weighed against promises made by the general/section editors and the time-sensitive considerations of tenure cases depending on RC volumes being published, etc.
  
 ### Prod file management system

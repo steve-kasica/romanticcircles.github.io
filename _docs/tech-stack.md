@@ -3,4 +3,4 @@ title: RC Tech Stack
 permalink: /docs/tech-stack/
 ---
 
-We use many tools. Whoooo
+We use many tools. Woohoo!
