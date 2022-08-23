@@ -5,13 +5,11 @@ permalink: /docs/rc-position-descriptions/
 
 ## RC Tech Positions Overview
  
-### Technical Editor / Site Manager
+### Assistant Editor / Project Manager
  
-RC Technical Editors are responsible for the day-to-day operation and maintenance of the site’s Drupal environments, infrastructure, and appearance; coordination of RC initiatives and publications, including regular communication with the general editors, section editors, and contributors, as well as managing RC’s PR and social media presence; facilitating and implementing all stages of the digital publication process for RC Praxis, Editions, Unbound, and Pedagogies volumes, including copy editing, TEI encoding, layout and design, proofing, and publication; researching and implementing best practices for DH and leveraging metadata; training and management of RC interns and future Technical Editors at CU, including maintenance of RC’s tech handbook; and other duties to be assigned by the general editors.
+RC Assistant Editors are responsible for the day-to-day operation and maintenance of the site’s Drupal environments, infrastructure, and appearance; coordination of RC initiatives and publications, including regular communication with the general editors, section editors, and contributors, as well as managing RC’s PR and social media presence; facilitating and implementing all stages of the digital publication process for RC Praxis, Editions, Unbound, and Pedagogies volumes, including copy editing, TEI encoding, layout and design, proofing, and publication; researching and implementing best practices for DH and leveraging metadata; training and management of RC interns and future Technical Editors at CU, including maintenance of RC’s tech handbook; and other duties to be assigned by the general editors.
  
-### DH / Publishing Interns
- 
-RC Interns report both to their instructor of record and to CU’s current technical editors. The CU tech editors will be interns’ main point of contact regarding both technical issues and production schedules. Internship duties will include production-facing tasks such as copy editing, proofing, and TEI encoding/transformation of essays, and may also include digital humanities best practices research and site maintenance duties. All of these assignments will be designed with the express concern of preparing interns to operate and innovate in digital humanities spaces, providing an environment for them to familiarize themselves with DH and digital publishing processes at RC.
+
 
 ### Individual Contributors
  
