@@ -54,6 +54,23 @@
 // Use anchor or button elements instead of `li`s or `div`s to create interactive items.
 // Includes an extra `.active` modifier class for showing selected items.
 
+a.list-group-subitem,
+button.list-group-subitem {
+  color: $list-group-link-color;
+
+  .list-group-subitem-heading {
+    color: $list-group-link-heading-color;
+  }
+
+  // Hover state
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $list-group-link-hover-color;
+    background-color: $list-group-hover-bg;
+  }
+}
+
 a.list-group-item,
 button.list-group-item {
   color: $list-group-link-color;
