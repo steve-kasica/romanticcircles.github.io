@@ -37,6 +37,17 @@
   }
 }
 
+.list-group-subitem {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  padding: 4px 4px;
+  // Place the border on the list items and negative margin up for better styling
+  margin-bottom: -12px;
+  background-color: $list-group-bg;
+  border: 1px solid $list-group-border;
+
+}
 
 // Interactive list items
 //

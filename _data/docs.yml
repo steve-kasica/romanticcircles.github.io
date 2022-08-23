@@ -1,23 +1,31 @@
-- title: RC Handbook
-  docs:
-  - home
-  - introduction
-  - rc-position-descriptions
-  - tech stack
-  - themes
-  - customization
+toc:
+  - title: RC Handbook
+    docs:
+      - page: home
+        subsection:
+          - page: yeeee
+      - page: introduction
+      - page: rc-position-descriptions
+        url: rc-position-descriptions.html
+      - page: tech-stack
+      - page: themes
+      - page: customization
 
-- title: Production Documentation
-  docs:
-  - drupal-guide
-  - copy editing guide
-  - TEI coding guide
-  - digital publishing guide
-  - cheatsheet
-  - font-awesome
-  - bootstrap
+  - title: Production Documentation
+    docs:
+      - page: drupal-guide
+      - page: copy editing guide
+      - page: TEI coding guide
+      - page: digital publishing guide
+      - page: cheatsheet
+      - page: font-awesome
+        subsection:
+          - page: test
+          - page: tech-stack
+          - page: rc-house-style
+      - page: bootstrap
 
-- title: Contributor Resources
-  docs:
-  - rc-house-style
-  - publication guide 
+  - title: Contributor Resources
+    docs:
+      - page: rc-house-style
+      - page: publication guide 
