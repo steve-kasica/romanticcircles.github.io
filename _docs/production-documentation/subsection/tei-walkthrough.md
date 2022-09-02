@@ -43,11 +43,8 @@ After you've converted all .docx files to .xml, these new TEI files need to be p
 5. Run (or click) `$ git fetch --all` to see if any changes have been made to the remote repo since you pulled your local copy of it. If changes are present, pull them into your local repo with `$ git pull --all`. In GitHub Desktop, these steps can be accomplished by clicking "Fetch Origin" and then, if appropriate, "Pull Origin." If in doubt about this process, or if you get a git conflict message, reach out to an assistant/technical editor.
 6. Once your local repo is synced to the origin (on GitHub), place the new folder containing the XML files into the repo's appropriate folder (e.g., Praxis, Editions).
 7. Commit your changes in git (in GitHub Desktop, write a commit message in the **Summary** field and click **Commit to Master**). Now push your local changes (added files) to the remote origin (in GitHub Desktop, click **Push Origin**).
-8. 
-```
-NOTE: If this is your first time coding TEI files for RC, you'll also need to clone the rc-tei archive to your local machine. A full guide on using git is available inside this documentation, which we suggest you review before using git to track and manage RC repositories.
-```
 
+> NOTE: If this is your first time coding TEI files for RC, you'll also need to clone the rc-tei archive to your local machine. A full guide on using git is available inside this documentation, which we suggest you review before using git to track and manage RC repositories.
 
 ## Getting Started in OxygenXML
 
