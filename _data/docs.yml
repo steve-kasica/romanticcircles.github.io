@@ -16,6 +16,10 @@ toc:
       - page: drupal-guide
       - page: copy editing guide
       - page: tei-guidelines
+        subsection:
+          - page: tei-walkthrough
+          - page: rc-tei-header
+          - page: rc-tei-style
       - page: digital publishing guide
       - page: cheatsheet
       - page: font-awesome
