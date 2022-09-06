@@ -73,7 +73,7 @@ An example of a poem/stanza in TEI:
 
 #### Styling document elements in TEI
 
-The following TEI tags will result in HTML tags that produce the described formatting. Note that the `<hi>` tag simply marks a word or phrase as graphically distinct from the surrounding text; it does not specify reasons for this distinction. For this reason, it may often be desirable to use the following `rend` attributes with tags that supply a specific editorial / textual rationale for the resulting formatting (see below). This is particularly true with formatting practices that commonly marks insertions (superscript) and deletions ()
+The following TEI tags will result in HTML tags that produce the described formatting. Note that the `<hi>` tag simply marks a word or phrase as graphically distinct from the surrounding text; it does not specify reasons for this distinction. For this reason, it may often be desirable to use the following `rend` attributes with tags that supply a specific editorial / textual rationale for the resulting formatting (see below). This is particularly true with editorial formatting practices commonly used to signal insertions (superscript / carets) and deletions (strikethrough).
 
 - Italics: `<hi rend="italic">example</hi>`
 - Bold: `<hi rend="bold">example</hi>`
@@ -87,7 +87,9 @@ The following TEI tags will result in HTML tags that produce the described forma
 - Centered element: `<hi rend="center">example</hi>`
 - Change font (gothic / cursive): `<hi rend="gothic">example</hi>` // `<hi rend="cursive">example</hi>`
 
-#### Editorial tags
+**Rendition formatting**: TEI also allows the "rendition" formatting attribute on most tags, which can be used to apply common CSS classes to the targeted tag during transformation to HTML. The usable TEI "renditions" are declared in the document's TEI header and can be used via the simple attribute `<tag rendition="#declared-name">`. RC commonly uses rendition attributes to achieve specific formatting within document sections, particularly to simulate old title pages and the like.
+
+#### Editorial style tags
 
 - Emphasis: `<emph>example</emph>`
   - **Note**: In RC's transforms, the `<emph>` tag automatically produces italicized text (HTML: `<em>`) and does not require a `rend` attribute.
@@ -101,6 +103,8 @@ The following TEI tags will result in HTML tags that produce the described forma
 - Handwriting: the `<hand>` tag is used to signal the person(s) responsible for writing the document, and is used in the TEI header. To mark a shift of hand, whether it be a new scribe or a new instrument (i.e., a shift to pencil from pen), the `<handShift>` tag is used in the running text.
   - If `<hand>` is used in the TEI header, it can contain the attributes "scribe" ane "ink." E.g., `<hand scribe="Dorothy Wordsworth" ink="pen">`.
   - The `<handShift>` tag in running text will parallel the use of `<hand>` but contain the attributes "new" (to signal the new scribe) and "ink." E.g., `<handShift new="Bob Villa" ink="pencil">`.
+
+**Note**: These tags (with the exception of `<emph>`) merely encode metadata without any visible output in the resulting HTML. Any of the preceding tags can accept a "rend" or "rendition" attribute if needed to achieve the necessary formatting in the output. 
 
 #### Titles
 
@@ -126,15 +130,15 @@ Letters take a special set of enclosed tags inside the top-level `<div type="let
 
 ```xml
 <opener>
-    <dateline>
-        <address>
-            <placeName>
-                <ref target="places.html#DukeStBath">Bath.</ref>
-            </placeName>
-        </address>
-        <date when="1791-12-10">Saturday. December 10 1791.</date>
-    </dateline>
-    <salute>Dear Collins</salute>
+  <dateline>
+    <address>
+      <placeName>
+        <ref target="places.html#DukeStBath">Bath.</ref>
+      </placeName>
+    </address>
+    <date when="1791-12-10">Saturday. December 10 1791.</date>
+  </dateline>
+  <salute>Dear Collins</salute>
 </opener>
 <!-- Text of the letter goes here inside <p> tags -->
 <closer>
