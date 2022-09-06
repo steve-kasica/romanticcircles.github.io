@@ -5,7 +5,9 @@ permalink: /docs/rc-tei-style/
 
 ### Tags for organizing text
 
-**Divs** — this tag acts as a “wrapper” to contain various types of content. Most top-level organizational elements/sections of the document within the `<body>` tag will take the `<div type="">` tag. The types used by RC include:
+#### Divs
+
+The `<div>` tag acts as a “wrapper” to contain various types of content. Most top-level organizational elements/sections of the document within the `<body>` tag will take the `<div type="">` tag. The types used by RC include:
 
 - `<div type="essay">` — (surrounds the entire text of an essay, including the works Cited [see below])
 - `<div type="citation">` — (wraps the works cited section)
@@ -14,41 +16,95 @@ permalink: /docs/rc-tei-style/
 - `<div type="poetry">` — (using this tag triggers a line counting mechanism in the XSLT transformation to HTML)
 - `<div type="paratext">` — (a file like “about,” “abstracts,” or “chronology” would take this tag)
 
-**Headings** — all document titles and section headings should be enclosed in `<head></head>` tags. *These can occur only after `<div>` tags.* The `<head>` tags will print to the screen differently depending on what `<div>` tags the correspond to; e.g., a `<head>` tag after `<div type="section">` will transform into a subhead.
+#### Headings
+
+All document titles and section headings should be enclosed in `<head></head>` tags. *These can occur only after `<div>` tags.* The `<head>` tags will print to the screen differently depending on what `<div>` tags the correspond to; e.g., a `<head>` tag after `<div type="section">` will transform into a subhead.
 
 - With journal entries, enclose the date tag within the heading tag. See the letters section for the conventions for the date tag.
   
-**Paragraphs** — this tag is pretty self-explanatory, but it should always come after a `<div>` tag; encloses all paragraph text and denotes paragraph breaks.
+#### Paragraphs
+
+This tag should always nest within a `<div>` tag; encloses all paragraph text and denotes paragraph breaks.
 
 - `<p>PARAGRAPH</p>`
 
-**Line Break** — this tag enforces a blank line in the resulting HTML. Note that `<lb/>` is self-closing, so no end tag is needed.
+#### Line Break
+
+This tag enforces a blank line in the resulting HTML. Note that `<lb/>` is self-closing, so no end tag is needed.
 
 - `<lb/>`
 
-**Blockquotes** — used to set a long quote off from the surrounding text
+#### Blockquotes
 
-- `<quote>A band of cruel ruffians and assassins, reeking with [her sentinel’s] blood, rushed into the chamber of the queen, and pierced with a hundred strokes of bayonets and poniards the bed, from whence this persecuted woman had but just time to fly almost naked, and, through ways unknown to the murderers, had escaped to seek refuge at the feet of a king and husband, not secure of his own life for a moment (Burke 71).</quote>`
+`<quote>` tags are used to set a long quote off from the surrounding text:
+
+```xml
+<quote>A band of cruel ruffians and assassins, reeking with [her sentinel’s] blood, rushed into the chamber of the queen, and pierced with a hundred strokes of bayonets and poniards the bed, from whence this persecuted woman had but just time to fly almost naked, and, through ways unknown to the murderers, had escaped to seek refuge at the feet of a king and husband, not secure of his own life for a moment (Burke 71).</quote>
+```
+
 - Don't close the enclosing `<p>` tag after the quote unless the paragraph actually ends with the block quote (which is rare).
 
-**Poetry** — these tags are used to create and number verse (when nested inside a `<div type="poetry">` tag)
+#### Poetry / Verse
+
+A series of nested tags can be used to create and number verse (when nested inside a `<div type="poetry">` tag):
 
 - `<lg type="stanza">` is used for each stanza unit
 - `<l>for each line</l>` for each individual line of verse within the `<lg>` tags
 - For lines of poetry quoted within paragraphs, use `<quote><lg type="stanza">` followed by individual lines within `<l>` tags. If the paragraph doesn't end before the quoted verse, don't close the `<p>` tag until the paragraph actually ends.
 
-### Stylistic Tags
+An example of a poem/stanza in TEI:
 
-- Italics: `<emph>example</emph>`
+```xml
+<div type="poetry">
+  <lg type="stanza">
+    <l><emph>Her care</emph>&#8212;’twas a sweet one, I think&#8212;</l>
+    <l>Was to tend on her mother, and spin,</l>
+    <l>And to foster the willows that drink</l>
+    <l>Of the dews from old Cam’s sedgy brim.</l>
+    <l><emph>Her ambition</emph>&#8212;smile not, ye proud group;</l>
+    <l>For industry stood at her wheel,</l>
+    <l>And bade her to nourish the hope,</l>
+    <l>That the osiers, she rais’d, she might peel.</l>
+  </lg>
+</div>>
+```
+
+### Stylistic and Editorial Tags
+
+#### Styling document elements in TEI
+
+The following TEI tags will result in HTML tags that produce the described formatting. Note that the `<hi>` tag simply marks a word or phrase as graphically distinct from the surrounding text; it does not specify reasons for this distinction. For this reason, it may often be desirable to use the following `rend` attributes with tags that supply a specific editorial / textual rationale for the resulting formatting (see below). This is particularly true with formatting practices that commonly marks insertions (superscript) and deletions ()
+
+- Italics: `<hi rend="italic">example</hi>`
 - Bold: `<hi rend="bold">example</hi>`
-- Underline: `<hi rendition="#underline">example</hi>`
-- Superscript: `<hi rend=”sup”></hi>`
-- Strikethroughs (deleted text): `<del>example</del>`
-- Additions (caret): `<add>example</add>`
-- Illegible text: the `<gap>` and `<unclear>` tags indicate points where material has been omitted in a transcription, whether for editorial reasons described in the TEI header, as part of sampling practice, or because the material is illegible, invisible, or inaudible. E.g., `<gap reason=”illegible”>example</gap>`
-  - Other acceptable “reasons” include: “damaged” or “lost”
+- Underline: `<hi rend="underline">example</hi>`
+- Strikethrough: `<hi rend="strike">example</hi>`
+- Small caps: `<hi rend="smcap">example</hi>`
+- Superscript: `<hi rend=”sup”>example</hi>`
+- Subscript: `<hi rend="sub">example</hi>`
+- Overline: `<hi rend="overbar">example</hi>`
+- Expanded text: `<hi rend="expanded">example</hi>`
+- Centered element: `<hi rend="center">example</hi>`
+- Change font (gothic / cursive): `<hi rend="gothic">example</hi>` // `<hi rend="cursive">example</hi>`
 
-**Titles** — the different levels of title tags correspond with the type of resource being cited:
+#### Editorial tags
+
+- Emphasis: `<emph>example</emph>`
+  - **Note**: In RC's transforms, the `<emph>` tag automatically produces italicized text (HTML: `<em>`) and does not require a `rend` attribute.
+- Deleted (crossed-out) text: `<del>example</del>`
+  - For the tag to render strikethrough text on the site: `<del rend="strike">`
+- Additions (caret): `<add>example</add>`
+  - For the tag to rend superscript or subscript text on the site: `<add rend="sup"/"sub">`
+- Illegible text: the `<gap>` and `<unclear>` tags indicate points where material has been omitted in a transcription, whether for editorial reasons described in the TEI header, as part of sampling practice, or because the material is illegible, invisible, or inaudible.
+  - The `<gap>` tag should include the "reason" attribute to explain why text is unavailable; e.g., `<gap reason=”illegible”>example</gap>`
+  - Other acceptable “reasons” include: “damaged” or “lost”
+- Handwriting: the `<hand>` tag is used to signal the person(s) responsible for writing the document, and is used in the TEI header. To mark a shift of hand, whether it be a new scribe or a new instrument (i.e., a shift to pencil from pen), the `<handShift>` tag is used in the running text.
+  - If `<hand>` is used in the TEI header, it can contain the attributes "scribe" ane "ink." E.g., `<hand scribe="Dorothy Wordsworth" ink="pen">`.
+  - The `<handShift>` tag in running text will parallel the use of `<hand>` but contain the attributes "new" (to signal the new scribe) and "ink." E.g., `<handShift new="Bob Villa" ink="pencil">`.
+
+#### Titles
+
+The different levels of title tags correspond with the type of resource being cited, and will format the output text accordingly (i.e., with italics or quotation marks):
 
 - `<title level="m">`: for all monographs, books, etc.
 - `<title level="j”>`: for all journal / periodical titles
@@ -60,7 +116,7 @@ permalink: /docs/rc-tei-style/
 
 All notes should occur inline with the main body of the text (even though they will appear at the end of the text when published).
 
-- `<note place="foot" resp="editors"> All quotations from Coleridge's poetic and dramatic works are taken from Mays's edition, unless otherwise indicated.</note>`
+- `<note place="foot" resp="editors">All quotations from Coleridge's poetic and dramatic works are taken from Mays's edition, unless otherwise indicated.</note>`
 - If the note is an original (period) author's note as opposed to a contemporary editor's note, use `resp="author"`.
 - **Note**: With RC's new XSLT transforms, this code will trigger a double-printing of the note in the output HTML. When imported to the site, this results in a "popup" note on mouseover; if the HTML file is viewed in a local web browser, however, this double-printing will look like a mistake.
 

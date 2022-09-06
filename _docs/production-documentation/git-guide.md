@@ -82,6 +82,7 @@ Every time you commit changes to a git repo, they're stamped with your user info
 
 ```zsh
 $ git config --global user.name "John Doe"
+[The shell will not respond, but the user name has been written to the git config file]
 $ git config --global user.email johndoe@example.com
 ```
 
@@ -118,7 +119,7 @@ More advanced commands & undo options (use with caution!):
 
 - `$ git fetch --all`: fetches all remote branches and makes them available for local checkout.
 - `$ git branch`: without any options or flags, shows local branches available for checkout; the current branch will be highlighted with an asterisk beside it. To create and switch to a new branch, use the command `$ git branch <new-branch-name>`.
-- `$ git checkout <branch>`: lets you switch between branches created by `$ git branch`. 
+- `$ git checkout <branch>`: lets you switch between branches created by `$ git branch`.
 - `$ git log`: shows the project history in the form of all commits that have been made. This can be useful if you need to revert the repo to the state of a previous commit since it shows you the hash (number) of all commits. After you run this command, use spacebar to advance through the history, and you'll need to type `q` to exit the output. Use the "--oneline" flag to condense this history to easily see commit hash numbers: `$ git log --oneline`.
 - `$ git diff`: without options this command shows any uncommitted changes since the last commit. Exit with `q`. To compare two different branches, use `$ git diff <branch1>..<branch2>`.
 - `$ git merge <branch-to-merge>`: merges the named branch with the current branch. If the branch histories are too divergent, or have conflicting changes, the merge will fail and will have to be reconciled. To abort a failed merge, use `$ git merge --abort`. (For more on merge conflicts, see [this guide](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts).)
