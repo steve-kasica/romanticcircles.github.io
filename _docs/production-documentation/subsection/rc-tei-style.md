@@ -126,9 +126,9 @@ As hinted above, in (rare) cases where only an image is to be inserted without a
   - Replace "xx" above with the appropriate (usually) 2-letter [HTML ISO language code](https://www.w3docs.com/learn-html/html-language-codes.html).
 - Epigraphs: use `<epigraph>“What Fools These Mortals Be!”</epigraph>`
   - Include the `<quote>` tags within the epigraph tags.
-- Page Breaks: `<pb>`
+- Page Breaks: `<pb/>` (note that this tag is self-closing)
 
-**Citations/Bibliograpy**
+**Citations/Bibliograpy:**
 
 - Use the tag `<div type="citation">` to enclose the entire bibliography.
 - If the bibliography has a specific title, enclose the title using the `<head>` tags.
@@ -142,8 +142,9 @@ As hinted above, in (rare) cases where only an image is to be inserted without a
   
 ```xml
 <anchor xml:id="section1">
-<!-- Any amount of intervening text between -->
+<!-- Any amount of intervening text -->
 <ref target="#section1">
 ```
 
-- This method also works *between* documents. Use a relative link to the appropriate HTML file, followed by the `#xml:id`: <ref target="/editions/guide_lakes/editions.2020.guide_lakes.introduction.html#section1">
+- This method also works *between* documents. Use a relative link to the appropriate HTML file, followed by the `#xml:id`:
+  - `<ref target="/editions/guide_lakes/editions.2020.guide_lakes.introduction.html#section1">`

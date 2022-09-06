@@ -52,7 +52,8 @@ To understand the local <--> remote git workflow, consider this image, which pre
 
 Note how this image rehearses the **clone**, **add**, and **commit** commands covered in the previous subsection, and presents them as taking place inside the user's local machine. Since this is a shared project repository, however, there are other contributors working on these files too: in addition to local changes, we must consider changes to the central repo (remote).
 
-**THIS PART IS IMPORTANT**
+#### *THIS PART IS IMPORTANT*
+
 Any time you begin working in a git repo to which other collaborators are making changes, it is **vital** that you pull in all changes that have been made to the remote to your local repo before you start editing files. This is what the **fetch** and **pull** commands are for: **fetch** pings the remote and downloads new commits and files from the remote repository without changing anything in the state of your local repo; **pull**, on the other hand, downloads all remote content for the active branch and merges it into your local repo, completely bringing your local files up to date with the remote origin.
 
 The best practice when opening a git project is to run a **fetch** to see if any changes have been made to the remote. If they have, you should **pull** these into your local repo to ensure everything is synced up before you begin making changes.
@@ -131,7 +132,7 @@ If you'd like to learn more about git, [Atlassian has a fantastic in-depth tutor
 
 When you join the RC team — for however long! — the assistant editors will provide your GitHub account (which you'll need to create in advance at [this page](https://github.com/signup)) with access to the Romantic Circles organization on GitHub.
 
-As noted above, anyone can clone a public GitHub repo, but in order to **push** to an RC repo you'll need elevated privileges. Begin by cloning one of RC's public repos to an easy-to-access place on your computer (our RC machines have a desktop folder called "RC-GIT" into which we clone all our repos). If you want to use the terminal, simply type `$ cd ~/Desktop`, then `$ mkdir RC-GIT`, then `$ git clone <git-url>`. Remember that the git url used to clone the repo can be found by clicking on the green "Code" button within each repo at [https://github.com/romanticcircles](https://github.com/romanticcircles). 
+As noted above, anyone can clone a public GitHub repo, but in order to **push** to an RC repo you'll need elevated privileges. Begin by cloning one of RC's public repos to an easy-to-access place on your computer (our RC machines have a desktop folder called "RC-GIT" into which we clone all our repos). If you want to use the terminal, simply type `$ cd ~/Desktop`, then `$ mkdir RC-GIT`, then `$ git clone <git-url>`. Remember that the git url used to clone the repo can be found by clicking on the green "Code" button within each repo at [https://github.com/romanticcircles](https://github.com/romanticcircles).
 
 Remember that you can also clone all of the RC repos using GitHub Desktop (or GitKraken); both of these apps will prompt you to log in and give you the option to clone the repos that you have access to. Using these apps may also allow you to bypass authentication using a "Personal Access Token," as described below.
 

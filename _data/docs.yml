@@ -14,7 +14,8 @@ toc:
   - title: Production Documentation
     docs:
       - page: drupal-guide
-      - page: copy editing guide
+      - page: git-guide
+      - page: copy-editing-guide
       - page: tei-guidelines
         subsection:
           - page: tei-walkthrough
@@ -27,7 +28,7 @@ toc:
           - page: test
           - page: tech-stack
           - page: rc-house-style
-      - page: bootstrap
+      
 
   - title: Contributor Resources
     docs:
