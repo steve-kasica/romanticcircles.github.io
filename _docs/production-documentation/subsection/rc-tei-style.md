@@ -39,7 +39,11 @@ This tag enforces a blank line in the resulting HTML. Note that `<lb/>` is self-
 `<quote>` tags are used to set a long quote off from the surrounding text:
 
 ```xml
-<quote>A band of cruel ruffians and assassins, reeking with [her sentinel’s] blood, rushed into the chamber of the queen, and pierced with a hundred strokes of bayonets and poniards the bed, from whence this persecuted woman had but just time to fly almost naked, and, through ways unknown to the murderers, had escaped to seek refuge at the feet of a king and husband, not secure of his own life for a moment (Burke 71).</quote>
+<quote>A band of cruel ruffians and assassins, reeking with [her sentinel’s] blood, rushed 
+into the chamber of the queen, and pierced with a hundred strokes of bayonets and poniards 
+the bed, from whence this persecuted woman had but just time to fly almost naked, and, 
+through ways unknown to the murderers, had escaped to seek refuge at the feet of a king 
+and husband, not secure of his own life for a moment (Burke 71).</quote>
 ```
 
 - Don't close the enclosing `<p>` tag after the quote unless the paragraph actually ends with the block quote (which is rare).
@@ -75,19 +79,24 @@ An example of a poem/stanza in TEI:
 
 The following TEI tags will result in HTML tags that produce the described formatting. Note that the `<hi>` tag simply marks a word or phrase as graphically distinct from the surrounding text; it does not specify reasons for this distinction. For this reason, it may often be desirable to use the following `rend` attributes with tags that supply a specific editorial / textual rationale for the resulting formatting (see below). This is particularly true with editorial formatting practices commonly used to signal insertions (superscript / carets) and deletions (strikethrough).
 
-- Italics: `<hi rend="italic">example</hi>`
-- Bold: `<hi rend="bold">example</hi>`
-- Underline: `<hi rend="underline">example</hi>`
-- Strikethrough: `<hi rend="strike">example</hi>`
-- Small caps: `<hi rend="smcap">example</hi>`
-- Superscript: `<hi rend=”sup”>example</hi>`
-- Subscript: `<hi rend="sub">example</hi>`
-- Overline: `<hi rend="overbar">example</hi>`
-- Expanded text: `<hi rend="expanded">example</hi>`
-- Centered element: `<hi rend="center">example</hi>`
-- Change font (gothic / cursive): `<hi rend="gothic">example</hi>` // `<hi rend="cursive">example</hi>`
+| Style                 | TEI Attribute                       |
+|  -------------------  |  -------------------------------    |
+| Italics               | `<hi rend="italic">example</hi>`    |
+| Bold                  | `<hi rend="bold">example</hi>`      |
+| Underline             | `<hi rend="underline">example</hi>` |
+| Strikethrough         | `<hi rend="strike">example</hi>`    |
+| Small caps            | `<hi rend="smcap">example</hi>`     |
+| Superscript           | `<hi rend=”sup”>example</hi>`       |
+| Subscript             | `<hi rend="sub">example</hi>`       |
+| Overline              | `<hi rend="overbar">example</hi>`   |
+| Expanded text         | `<hi rend="expanded">example</hi>`  |
+| Centered element      | `<hi rend="center">example</hi>`    |
+| Change font (gothic)  | `<hi rend="gothic">example</hi>`    |
+| Change font (cursive) | `<hi rend="cursive">example</hi>`   |
 
 **Rendition formatting**: TEI also allows the "rendition" formatting attribute on most tags, which can be used to apply common CSS classes to the targeted tag during transformation to HTML. The usable TEI "renditions" are declared in the document's TEI header and can be used via the simple attribute `<tag rendition="#declared-name">`. RC commonly uses rendition attributes to achieve specific formatting within document sections, particularly to simulate old title pages and the like.
+
+Note that, depending on editorial/authorial metadata considerations (as discussed in the following section), there may be myriad ways to code a specific style attribute onto text. Often an encoder must use their best judgment as to the most appropriate tag to pair with an an attribute.
 
 #### Editorial style tags
 
@@ -116,6 +125,21 @@ The different levels of title tags correspond with the type of resource being ci
 - `<title level="s">`: for series
 - `<title level="u">`: unpublished works
 
+#### Special Characters
+
+The following special characters should be supplied via their HTML 5.0 numeric/named character references (NCRs) or in the TEI, as declared in the header:
+
+- Em dash: `&#8212;`
+- En dash: `&#8211;`
+- Ampersand: `&amp;`
+- Double curly quotes: `&#8220;` (open) / `&#8221;` (close)
+- Single curly quotes: `&#8216;` (open) / `&#8217;` (close)
+- Pound sign: `&#35;`
+- Greater than (>): `&gt;` / Less than (<): `&lt;`
+
+Many curly quotes will be added automatically via the transforms (to titles, for instance), though NCRs will need to be supplied in the case of quotations within the text. The most effective method for applying the em and en dash codes, assuming a copy editor has done a consistent job of correctly supplying these glyphs in Word, is to perform a search-and-replace function using Oxygen. (On Mac, the relevant keyboard shortcuts are: en dash = `option + [hyphen]` & em dash = `option + shift + [hyphen]`.)
+
+It is possible to add any unicode character to the TEI via this method of numeric reference; you can find an exhaustive list of characters at [this resource](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references).
 ### Annotations/Notes
 
 All notes should occur inline with the main body of the text (even though they will appear at the end of the text when published).

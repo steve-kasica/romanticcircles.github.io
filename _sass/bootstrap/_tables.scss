@@ -2,6 +2,8 @@
 // Tables
 // --------------------------------------------------
 
+$table-cell-padding: 10px 25px;
+$table-border-color: #ffffff;
 
 table {
   background-color: $table-bg;
@@ -20,8 +22,10 @@ th {
 // Baseline styles
 
 .table {
-  width: 100%;
+  width: 80%;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: $line-height-computed;
   // Cells
   > thead,
@@ -34,9 +38,17 @@ th {
         line-height: $line-height-base;
         vertical-align: top;
         border-top: 1px solid $table-border-color;
+        border-bottom: 2 px solid #ddd;
       }
     }
   }
+   td, 
+   th { 
+     padding: 0; 
+     border-bottom-width: 1px; 
+     border-bottom-style: solid; 
+     border-bottom-color: #ddd; 
+   } 
   // Bottom align for column headings
   > thead > tr > th {
     vertical-align: bottom;
