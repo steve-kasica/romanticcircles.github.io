@@ -113,7 +113,7 @@ Note that, depending on editorial/authorial metadata considerations (as discusse
   - If `<hand>` is used in the TEI header, it can contain the attributes "scribe" ane "ink." E.g., `<hand scribe="Dorothy Wordsworth" ink="pen">`.
   - The `<handShift>` tag in running text will parallel the use of `<hand>` but contain the attributes "new" (to signal the new scribe) and "ink." E.g., `<handShift new="Bob Villa" ink="pencil">`.
 
-**Note**: These tags (with the exception of `<emph>`) merely encode metadata without any visible output in the resulting HTML. Any of the preceding tags can accept a "rend" or "rendition" attribute if needed to achieve the necessary formatting in the output. 
+**Note**: These tags (with the exception of `<emph>`) merely encode metadata without any visible output in the resulting HTML. Any of the preceding tags can accept a "rend" or "rendition" attribute if needed to achieve the necessary formatting in the output.
 
 #### Titles
 
@@ -140,6 +140,7 @@ The following special characters should be supplied via their HTML 5.0 numeric/n
 Many curly quotes will be added automatically via the transforms (to titles, for instance), though NCRs will need to be supplied in the case of quotations within the text. The most effective method for applying the em and en dash codes, assuming a copy editor has done a consistent job of correctly supplying these glyphs in Word, is to perform a search-and-replace function using Oxygen. (On Mac, the relevant keyboard shortcuts are: en dash = `option + [hyphen]` & em dash = `option + shift + [hyphen]`.)
 
 It is possible to add any unicode character to the TEI via this method of numeric reference; you can find an exhaustive list of characters at [this resource](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references).
+
 ### Annotations/Notes
 
 All notes should occur inline with the main body of the text (even though they will appear at the end of the text when published).
@@ -179,8 +180,8 @@ Letters take a special set of enclosed tags inside the top-level `<div type="let
 
 These tags will ultimately be hyperlinked to the People and Places Indexes:
 
-- People: `<ref type=”a” target=”hyperlink to the entry in the index”>Person Name</ref>`
-- Places: `<ref type=”m” targer=”hyperlink to the entry in the index”>Place Name</ref>`
+- People: `<persName ref type=”a” target=”hyperlink-to-index-entry”>Person Name</persName>`
+- Places: `<placeName ref type=”m” target=”hyperlink-to-index-entry”>Place Name</placeName>`
 
 ### Images and Figures
 
