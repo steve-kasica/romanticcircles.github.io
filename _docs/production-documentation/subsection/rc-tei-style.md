@@ -14,6 +14,7 @@ The `<div>` tag acts as a “wrapper” to contain various types of content. Mos
 - `<div type="section">` — (used to define and separate distinct sections of documents, such as journal entries; used in conjunction with `<head>` tags [see below], this is how we create subheadings)
 - `<div type="letter">` — (used to denote epistolary content)
 - `<div type="poetry">` — (using this tag triggers a line counting mechanism in the XSLT transformation to HTML)
+- `<div type="epigraph">` — (for epigraphs; must contain nested `<quote>` and, when appropraite, `<lg>` tags, as defined below)
 - `<div type="paratext">` — (a file like “about,” “abstracts,” or “chronology” would take this tag)
 
 #### Headings
@@ -26,7 +27,7 @@ All document titles and section headings should be enclosed in `<head></head>` t
 
 This tag should always nest within a `<div>` tag; encloses all paragraph text and denotes paragraph breaks.
 
-- `<p>PARAGRAPH</p>`
+- `<p>Paragraph</p>`
 
 #### Line Break
 
@@ -191,7 +192,7 @@ These tags will ultimately be hyperlinked to the People and Places Indexes:
 
 ```xml
 <figure>
-  <graphic url="relative-path/to/emblem1Thumb.png" width=”400px”/>
+  <graphic url="relative-path/to/emblem1Thumb.png" width=”400px” rend="inline"/>
     <head>Emblemi d'Amore</head>
     <figDesc>Figure 1: A pair of naked winged cupids, each holding a flaming torch, in a rural setting.</figDesc> 
 </figure>
@@ -209,7 +210,7 @@ As hinted above, in (rare) cases where only an image is to be inserted without a
 
 - `<foreign xml:lang="xx">Fêtes publiques</foreign>`
   - Replace "xx" above with the appropriate (usually) 2-letter [HTML ISO language code](https://www.w3docs.com/learn-html/html-language-codes.html).
-- Epigraphs: use `<epigraph>“What Fools These Mortals Be!”</epigraph>`
+- Epigraphs: use `<div type="epigraph"><quote>“What Fools These Mortals Be!”</quote></div>`
   - Include the `<quote>` tags within the epigraph tags.
 - Page Breaks: `<pb/>` (note that this tag is self-closing)
 
