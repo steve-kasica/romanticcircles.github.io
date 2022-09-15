@@ -221,6 +221,12 @@ As hinted above, in (rare) cases where only an image is to be inserted without a
 - Each individual entry should be enclosed within the `<bibl>` tags.
 - Follow standard bibliographic formatting, except all titles must be enclosed within the `<title level="m">TITLE</title>` tags.
 
+**External Links** 
+- Use the tag <ref target="html link">TEXT THAT APPEARS ON THE SITE</ref>
+- Be sure to check the integrity of all links before embedding them in your code
+- Example: <ref target="https://archive.org/details/BBC_A_Film_By_Bowie_Cracked_Actor_1975">Cracked Actor</ref>
+
+
 **Anchors and Internal Links** — some volumes and editions will require internal linking among different texts in the volume, or between sections within a single document.
 
 - The `<anchor>` tag is the specific line in the TEI *to be linked to*; it will contain an `xml:id` attribute that can be placed elsewhere in the document to link back to this line.
