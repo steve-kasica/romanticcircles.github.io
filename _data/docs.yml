@@ -2,13 +2,11 @@ toc:
   - title: RC Handbook
     docs:
       - page: home
-        subsection:
-          - page: yeeee
       - page: introduction
       - page: rc-position-descriptions
         url: rc-position-descriptions.html
       - page: tech-stack
-      - page: themes
+      - page: pub-overview
       - page: comms-resources
 
   - title: Production Documentation
@@ -21,14 +19,8 @@ toc:
           - page: tei-walkthrough
           - page: rc-tei-header
           - page: rc-tei-style
-      - page: digital publishing guide
+      - page: digital-pub-guide
       - page: cheatsheet
-      - page: font-awesome
-        subsection:
-          - page: test
-          - page: tech-stack
-          - page: rc-house-style
-      
 
   - title: Contributor Resources
     docs:
