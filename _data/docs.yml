@@ -14,6 +14,7 @@ toc:
       - page: drupal-guide
       - page: git-guide
       - page: copy-editing-guide
+      - page: docpreparation
       - page: tei-guidelines
         subsection:
           - page: tei-walkthrough
