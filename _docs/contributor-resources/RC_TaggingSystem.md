@@ -8,6 +8,7 @@ permalink: /docs/contributor-resources/RC_TaggingSystem
 RC's tagging system is intended to enhance visitors' experience by increasing the site's searchability. By connecting a variety of resources together, with a single tag, viewers will see "suggested content," and might be compelled to take their research in an unintended direction. We have chosen to limit the number of tags available in order to increase the number of essays/resources linked together by a tag. Because of this limit, you might not find a tag that perfectly matches the topic of your research,but you can dramatically increase the number of views your work receives by having your work linked to other resources on the site.
 
 Please select 4-6 tags from the following list that are generally relevant to the topic of your research. Then send these tags to the editor of your volume/edition.
+
 ## Tags Listed Alphabetically
 
 abolition
