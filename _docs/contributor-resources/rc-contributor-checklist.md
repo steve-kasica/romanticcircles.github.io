@@ -1,5 +1,5 @@
 ---
-Title: Revision Checklist for Contributors
+title: Revision Checklist for Contributors
 permalink: /docs/rc-contributor-checklist/
 ---
 Before sending off the final version of your work to your volume/edition editor, please review the following checklist and correct any of these common errors.

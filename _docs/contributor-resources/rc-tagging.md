@@ -1,5 +1,5 @@
 ---
-Title: Tag Options for RC Contributors
+title: Tag Options for RC Contributors
 permalink: /docs/rc_tagging/
 ---
 
