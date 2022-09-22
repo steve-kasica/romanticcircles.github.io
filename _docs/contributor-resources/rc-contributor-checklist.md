@@ -3,7 +3,7 @@ Title: Revision Checklist for Contributors
 permalink: /docs/contributor-resources/rc-contributor-checklist
 ---
 Before sending off the final version of your work to your volume/edition editor, please review the following checklist and correct any of these common errors.
-For more detailed inquiries, please refer to the *RC House Style document*. The following recommendations generally defer to the Chicago Manual of Style, 17th edition.
+For more detailed inquiries, please refer to the *RC House Style document*. The following recommendations generally defer to the *Chicago Manual of Style, 17th edition*.
 
 ## General Requirements
 
