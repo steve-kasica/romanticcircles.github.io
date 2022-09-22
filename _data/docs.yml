@@ -25,5 +25,7 @@ toc:
 
   - title: Contributor Resources
     docs:
+      - page: rc-contributor-checklist
+      - page: rc-tagging
       - page: rc-house-style
       - page: publication guide 
