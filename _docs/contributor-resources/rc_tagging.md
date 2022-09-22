@@ -1,6 +1,6 @@
 ---
 Title: Tag Options for RC Contributors
-permalink: /docs/contributor-resources/rc_tagging
+permalink: /docs/rc_tagging/
 ---
 
 ## Tag Options for RC Contributors
