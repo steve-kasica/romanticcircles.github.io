@@ -1,9 +1,8 @@
 ---
-title: Tag Options for RC Contributors
+title: RC Tagging Options
 permalink: /docs/rc-tagging/
 ---
-
-## Tag Options for RC Contributors
+## Why we have a tagging system
 
 RC's tagging system is intended to enhance visitors' experience by increasing the site's searchability. By connecting a variety of resources together, with a single tag, viewers will see "suggested content," and might be compelled to take their research in an unintended direction. We have chosen to limit the number of tags available in order to increase the number of essays/resources linked together by a tag. Because of this limit, you might not find a tag that perfectly matches the topic of your research,but you can dramatically increase the number of views your work receives by having your work linked, via the tags, to other resources on the site.
 
