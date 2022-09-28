@@ -14,10 +14,10 @@ The `<div>` tag acts as a “wrapper” to contain various types of content. Mos
 - `<div type="section">` — (used to define and separate distinct sections of documents, such as journal entries; used in conjunction with `<head>` tags [see below], this is how we create subheadings)
 - `<div type="letter">` — (used to denote epistolary content)
 - `<div type="poetry">` — (using this tag triggers a line counting mechanism in the XSLT transformation to HTML)
-- `<div type="epigraph">` — (for epigraphs; must contain nested `<quote>` and, when appropraite, `<lg>` tags, as defined below)
+- `<div type="epigraph">` — (for epigraphs; must contain nested `<quote>` and, when appropriate, `<lg>` tags, as defined below)
 - `<div type="paratext">` — (a file like “about,” “abstracts,” or “chronology” would take this tag)
 
-Milestones - to provide a visual marker to separate div sections, use a milestone tag: `<lb/><milestone unit="paratext"/><lb/>`
+Milestones - to provide a visual marker to separate div sections, use a milestone tag: `<lb/><milestone unit="TYPE OF DIV JUST CLOSED, EX: "paratext"/><lb/>`
 
 #### Headings
 
@@ -34,7 +34,7 @@ This tag should always nest within a `<div>` tag; encloses all paragraph text an
 
 #### Line Break
 
-This tag enforces a blank line in the resulting HTML. Note that `<lb/>` is self-closing, so no end tag is needed.
+This tag enforces a blank line in the resulting HTML. Note that `<lb/>` is self-closing, so no end tag is needed. In other words, a line break tag can stand on its own. In some formatting instances, though, you might need to begin and end a line break tag (e.g. when using the milestone tag)
 
 - `<lb/>`
 
