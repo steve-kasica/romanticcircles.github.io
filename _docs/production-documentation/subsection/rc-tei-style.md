@@ -21,7 +21,9 @@ Milestones - to provide a visual marker to separate div sections, use a mileston
 
 #### Headings
 
-All document titles and section headings should be enclosed in `<head></head>` tags. *These can occur only after `<div>` tags.* The `<head>` tags will print to the screen differently depending on what `<div>` tags the correspond to; e.g., a `<head>` tag after `<div type="section">` will transform into a subhead.
+All document titles and section headings should be enclosed in `<head></head>` tags. *These can occur only after `<div>` tags.* The `<head>` tags will print to the screen differently depending on what `<div>` tags the correspond to
+
+-On rare occasions, you might need to use the tag `<head type="subhead"></head>`. This typically occurs when a contributor has divided their document into multiple sections with subsections.
 
 - Following the `<head></head>` tag in most essays/introductions, you will need to include a `<byline></byline>` tag that contains both a `<docAuthor>NAME</docAuthor>` tag and then an `<affiliation>UNIVERSITY NAME</affiliation>` tag.
 - With journal entries, enclose the date tag within the heading tag. See the letters section for the conventions for the date tag.
