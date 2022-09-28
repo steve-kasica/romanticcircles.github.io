@@ -21,6 +21,7 @@ toc:
           - page: rc-tei-header
           - page: rc-tei-style
       - page: digital-pub-guide
+      - page: databases
       - page: cheatsheet
 
   - title: Contributor Resources

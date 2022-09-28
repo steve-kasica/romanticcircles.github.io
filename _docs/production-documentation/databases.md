@@ -5,7 +5,7 @@ permalink: /docs/databases/
 
 ## About Databases
 
-Databases work.
+Databases have data.
 
 ## MySQL + Drupal + Acquia
 
