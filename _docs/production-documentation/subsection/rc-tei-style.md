@@ -26,6 +26,7 @@ All document titles and section headings should be enclosed in `<head></head>` t
 -On rare occasions, you might need to use the tag `<head type="subhead"></head>`. This typically occurs when a contributor has divided their document into multiple sections with subsections.
 
 - Following the `<head></head>` tag in most essays/introductions, you will need to include a `<byline></byline>` tag that contains both a `<docAuthor>NAME</docAuthor>` tag and then an `<affiliation>UNIVERSITY NAME</affiliation>` tag.
+  
 - With journal entries, enclose the date tag within the heading tag. See the letters section for the conventions for the date tag.
   
 #### Paragraphs
@@ -42,7 +43,7 @@ This tag enforces a blank line in the resulting HTML. Note that `<lb/>` is self-
 
 #### Lists
 
-We most often see lists following the `<div type="paratext">` tag. In general, you will want to use the `<list></list>` tag with the type specified as "unordered"--this will ensure that bullet points or numbers do not appear.
+We most often see lists following the `<div type="paratext">` tag. You will want to use the `<list></list>` tag with the type specified as either "ordered" (for numbered lists) or "unordered" (no numbers or bullet points will appear)
 
 Within the `<list>` tag, all items will be individually enclosed within the tag `<item></item>`.
 
