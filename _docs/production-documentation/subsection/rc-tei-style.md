@@ -38,6 +38,23 @@ This tag enforces a blank line in the resulting HTML. Note that `<lb/>` is self-
 
 - `<lb/>`
 
+#### Lists
+
+We most often see lists following the `<div type="paratext">` tag. In general, you will want to use the `<list></list>` tag with the type specified as "unordered"--this will ensure that bullet points or numbers do not appear.
+
+Within the `<list>` tag, all items will be individually enclosed within the tag `<item></item>`.
+
+-Example:
+`<div type="paratext">`
+`<list type="unordered">`
+`<item>A. Cheese</item>`
+`<item>B. Pepperoni</item>`
+`<item>C. Sauce</item>`
+`</list>`
+`</div>`
+
+##### Note that I have added in alphabetical headings into the text part of the tag. By using the "unordered" type, we can more easily adapt lists to fit the needs of whatever we are working on
+
 #### Blockquotes
 
 `<quote>` tags are used to set a long quote off from the surrounding text:
