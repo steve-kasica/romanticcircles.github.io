@@ -17,6 +17,8 @@ The `<div>` tag acts as a “wrapper” to contain various types of content. Mos
 - `<div type="epigraph">` — (for epigraphs; must contain nested `<quote>` and, when appropraite, `<lg>` tags, as defined below)
 - `<div type="paratext">` — (a file like “about,” “abstracts,” or “chronology” would take this tag)
 
+Milestones - to provide a visual marker to separate div sections, use a milestone tag: `<lb/><milestone unit="paratext"/><lb/>`
+
 #### Headings
 
 All document titles and section headings should be enclosed in `<head></head>` tags. *These can occur only after `<div>` tags.* The `<head>` tags will print to the screen differently depending on what `<div>` tags the correspond to; e.g., a `<head>` tag after `<div type="section">` will transform into a subhead.
