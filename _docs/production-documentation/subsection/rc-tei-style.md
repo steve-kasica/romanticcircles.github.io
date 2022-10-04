@@ -204,9 +204,12 @@ Letters take a special set of enclosed tags inside the top-level `<div type="let
 
 These tags will ultimately be hyperlinked to the People and Places Indexes:
 
-- People: `<persName ref type=”a” target=”hyperlink-to-index-entry”>Person Name</persName>`
-- Places: `<placeName ref type=”m” target=”hyperlink-to-index-entry”>Place Name</placeName>`
+- Places: `<ref target="NAME-OF-PLACE-FILE.html#NAME-AS-IT-APPEARS-IN-PLACE-FILE">NAME-AS-IT-APPEARS-IN-ORIG-DOC</ref>`
+  - Ex: `<ref target="places.html#Woolwich">Woolwich,</ref>`
 
+- People: `<ref target="NAME-OF-PERSONOGRAPHY-FILE.html#NAME-AS-IT-APPEARS-IN-BIO-FILE">NAME-AS-IT-APPEARS-IN-ORIG-DOC</ref>`
+  - Ex: `<ref target="people.html#BloomfieldMaryAnn">wife</ref>`
+  
 ### Images and Figures
 
 - Images: label images and thumbnails as follows (for file “picture”): picture.png / pictureThumb.png. With the “Thumb” suffix, the transforms will automatically create links to the larger image file without the suffix.
