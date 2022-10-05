@@ -136,6 +136,7 @@ Note that, depending on editorial/authorial metadata considerations (as discusse
 - Handwriting: the `<hand>` tag is used to signal the person(s) responsible for writing the document, and is used in the TEI header. To mark a shift of hand, whether it be a new scribe or a new instrument (i.e., a shift to pencil from pen), the `<handShift>` tag is used in the running text.
   - If `<hand>` is used in the TEI header, it can contain the attributes "scribe" ane "ink." E.g., `<hand scribe="Dorothy Wordsworth" ink="pen">`.
   - The `<handShift>` tag in running text will parallel the use of `<hand>` but contain the attributes "new" (to signal the new scribe) and "ink." E.g., `<handShift new="Bob Villa" ink="pencil">`.
+  - To change the color of the font use the `<span class="COLOR"></span>`
 
 **Note**: These tags (with the exception of `<emph>`) merely encode metadata without any visible output in the resulting HTML. Any of the preceding tags can accept a "rend" or "rendition" attribute if needed to achieve the necessary formatting in the output.
 
