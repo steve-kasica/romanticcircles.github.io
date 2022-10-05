@@ -302,42 +302,43 @@ Please select 4-6 tags from the following list that are generally relevant to th
 290. sociology
 291. sound
 292. South America
-293. spectacle
-294. study abroad
-295. subjectivity
-296. sublime
-297. sympathy
-298. taste
-299. technology
-300. temporality
-301. textuality
-302. theater
-303. theology
-304. theory
-305. thing theory
-306. topography
-307. tourism
-308. tragedy
-309. transatlantic studies
-310. transcultural
-311. translation
-312. transnational
-313. transgender studies
-314. trauma
-315. travel
-316. uncanny
-317. utilitarianism
-318. utopia
-319. vampires
-320. video games
-321. violence
-322. vision
-323. visual culture
-324. vitalism
-325. Vodoo
-326. walking
-327. war
-328. wedding
-329. West Indies
-330. women writers
-331. working class
+293. spatiality
+294. spectacle
+295. study abroad
+296. subjectivity
+297. sublime
+298. sympathy
+299. taste
+300. technology
+301. temporality
+302. textuality
+303. theater
+304. theology
+305. theory
+306. thing theory
+307. topography
+308. tourism
+309. tragedy
+310. transatlantic studies
+311. transcultural
+312. translation
+313. transnational
+314. transgender studies
+315. trauma
+316. travel
+317. uncanny
+318. utilitarianism
+319. utopia
+320. vampires
+321. video games
+322. violence
+323. vision
+324. visual culture
+325. vitalism
+326. Vodoo
+327. walking
+328. war
+329. wedding
+330. West Indies
+331. women writers
+332. working class
