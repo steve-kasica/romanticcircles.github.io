@@ -15,7 +15,7 @@ All TEI documents share an overall structure of hierarchically nested tags that 
 
 Every TEI document shares the same hierarchical tagging logic. The entire document must be enclosed by the `<TEI>` tag, within which come main document or metadata enclosures like `<teiHeader>`, `<text>`, or `<teiCorpus>`. Structural elements within the text itself, such as `<front>` (abstract), `<body>`, `<head>` (headings), and different `<div>` sections (such as the bibliography), are enclosed within the overarching `<text>` tag.
 
-Here's a three-level example of a standard TEI docuemnt using RC's schema:
+Here's a three-level example of a standard TEI document using RC's schema:
 
 ```xml
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
