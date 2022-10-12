@@ -193,7 +193,7 @@ In general, Romantic Circles follows the *Chicago Manual of Style (17th edition)
   - If found, query author on removal/rewriting to avoid.
 - When a note combines a citation with commentary, the source comes first. A period usually separates the citation from the commentary.
   - E.g., (1. Shakespeare, Julius Caesar, act 3, sc. 1. Caesar’s claim of constancy should be taken with a grain of salt.)
-- It is permissible for authors to insert endnotes at the end of titles or headings in the text.
+- It is not permissible for authors to insert endnotes at the end of titles or headings in the text.
 - For sources that are repeatedly cited, create an appropriate abbreviation for the source that is introduced in the first endnote.
   - E.g., 1. François Furet, The Passing of an Illusion: The Idea of Communism in the Twentieth Century, trans. Deborah Furet (Chicago: University of Chicago Press, 1999), 368 (hereafter cited in text as PI).
 
