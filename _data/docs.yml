@@ -13,7 +13,7 @@ toc:
     docs:
       - page: acquia-guide
         subsection:
-          - page: cloning-site.md
+          - page: cloning-site
       - page: drupal-guide
       - page: git-guide
       - page: copy-editing-guide

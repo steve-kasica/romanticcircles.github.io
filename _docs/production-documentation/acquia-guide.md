@@ -11,7 +11,7 @@ Eventually this page will contain instructions on how to perform key maintenance
 
 The easiest way to perform server-side maintenance, configuration, and automation tasks—as well as to track code using Acquia's git server—is to set up a Secure Shell (SSH) connection directly from your machine to Acquia's server infrastructure. First, we'll generate a new SSH key with 4096 bits of encryption on your local machine; then, we'll deploy, or "pair," this key to the Acquia server using the Acquia Cloud Platform GUI.
 
-> In the following guide, we'll be dealing with files which standard PC operating systems will hide by default ("hidden files"). To show hidden files on Mac OS, simply perform the keystroke `CMD + SHIFT + .` in any Finder window. In Windows, open a File Explorer window, then click the "..." ("more options") icon in the header bar and select "Options." In the settings window that opens, click the "View" tab, and under "Files and Folders," click the "Show hidden files, folders, and drives" static button. (You can also apply this "show all" setting to all folders of the same type using the option at the top of this window.)
+> In the following guide, we'll be dealing with files which standard PC operating systems will hide by default ("hidden files"). To show hidden files on Mac OS, simply perform the keystroke `CMD + SHIFT + .` in any Finder window. In Windows, open a File Explorer window, then click the "**...**" ("more options") icon in the header bar and select "**Options**." In the settings window that opens, click the "**View**" tab, and under "**Files and Folders**," click the "**Show hidden files, folders, and drives**" static button. (You can also apply this "show all" setting to all folders of the same type using the option at the top of this window.)
 
 ### Generating a new SSH key
 
@@ -38,7 +38,7 @@ The easiest way to perform server-side maintenance, configuration, and automatio
     Enter file in which to save the key (/users/[your-user-name]/.ssh/id_rsa): 
     ```
 
-    Simply hit "Return" to accept the default key location. If it doesn't already exist, the ".ssh" folder will be created in your user root directory. This is a hidden folder; on Mac OS, you can show hidden files using the keystroke CMD + SHIFT + . (period).
+    Simply hit "Return" to accept the default key location. If it doesn't already exist, the ".ssh" folder will be created in your user root directory (as a hidden folder).
 
 3. When prompted, enter and repeat a passphrase for use with your SSH key. If you have sole and secure access to your machine, you can simply hit "Return" to use a blank passkey. Here's what the completion of this interaction should look like:
 
@@ -80,13 +80,14 @@ Now that we've generated a local SSH key, it's ready to be deployed on the remot
     This command copies the contents of your id_rsa.pub file to your clipboard.
 
     > In Windows, you'll need to manually copy the contents of the id_rsa.pub file to your clipboard by opening the file using a text editor (such as Notepad, Atom, etc.). Note that to see the file in File Explorer, you'll need to show hidden files, as discussed at the beginning of this tutorial. Copy the contents of the id_rsa.pub file, making sure not to add any extra spaces or characters. **Note**: Windows will want to recognize the file as a "MS Publisher" file, but it is a simple text file and will not open in that app. Use Notepad or another text editor.
-    > You can also use a shell text editor such as vim (Linux/Mac OS), nano (Mac/Windows), or similar; simple "copy to clipboard" scripts also exist for Windows (clip) and Linux (xclip), but these tools require some configuration.
+  
+    You can also use a shell text editor such as vim (Linux/Mac OS), nano (Mac/Windows), or similar; simple "copy to clipboard" scripts also exist for Windows (clip) and Linux (xclip), but these tools require some configuration.
 
-2. Log into the Acquia Cloud Platform and click on your user icon at the top right of the page, then select "Account Settings." Next, select "SSH Keys" from the left navbar.
+2. Log into the Acquia Cloud Platform and click on your user icon at the top right of the page, then select "**Account Settings**." Next, select "SSH Keys" from the left navbar.
 
-3. In the SSH Key Name field, give your key a name for use in Acquia; this can be anything, but at minimum you should include your name/initials and the machine it's on (e.g., tjm_windows-PC). This will help you and/or RC staff identify the key in the future to determine which keys are active and which ones can be deleted.
+3. In the "**SSH Key Name**" field, give your key a name for use in Acquia; this can be anything, but at minimum you should include your name/initials and the machine it's on (e.g., tjm_windows-PC). This will help you and/or RC staff identify the key in the future to determine which keys are active and which ones can be deleted.
 
-4. Paste the contents of your clipboard, containing the entire string of characters from the generated RSA key, into the "Public Key" field. (This will begin with ssh-rsa and end with your user and machine info.) Make sure no extra spaces are present. Click "Add Key." If this works, you're done!
+4. Paste the contents of your clipboard, containing the entire string of characters from the generated RSA key, into the "**Public Key**" field. (This will begin with `ssh-rsa` and end with your user and machine info.) Make sure no extra spaces are present. Click "**Add Key**." If this works, you're done!
 
 > **Note**: It will take a few minutes for the key to propagate to the server and become active. Wait a few minutes, then try to SSH into the server, as discussed in the following section.
 
@@ -98,6 +99,6 @@ Once your key is deployed to Acquia Cloud Platform, you're ready to connect to t
 
 2. Open a new terminal instance. From your root (or any) directory, type `ssh`, a space, and then paste the SSH URL from the desired Acquia environment. You'll be prompted for the SSH passphrase you created above, and then you'll be connected to the web server (Linux). The command prompt will change from your local username to something like `romanticcircles@srv-7801:~$`.
 
-==Be careful! From this command prompt, you have (near) complete control of the site's server configuration files and code. Don't proceed further unless you know what you're doing!==
+*Be careful! From this command prompt, you have (near) complete control of the site's server configuration files and code. Don't proceed further unless you know what you're doing!*
 
 > **Note**: As discussed elsewhere in this guide, Acquia does not by default make the site's `web` (or `docroot`) folder visible on the live server. To edit the site's code directly via SSH, you must enable "Live Development Mode" under the blue Actions dropdown menu within an environment. For more on Acquia's Live Development Mode see [this documentation](https://docs.acquia.com/cloud-platform/manage/code/livedev/).
