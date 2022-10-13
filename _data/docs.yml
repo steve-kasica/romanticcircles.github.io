@@ -11,6 +11,9 @@ toc:
 
   - title: Production Documentation
     docs:
+      - page: acquia-guide
+        subsection:
+          - page: cloning-site.md
       - page: drupal-guide
       - page: git-guide
       - page: copy-editing-guide
