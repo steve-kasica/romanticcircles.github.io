@@ -341,7 +341,7 @@ Please select 4-6 tags from the following list that are generally relevant to th
 328. video games
 329. violence
 330. vision
-331. visual culture
+331. visual art
 332. vitalism
 333. Vodoo
 334. walking
