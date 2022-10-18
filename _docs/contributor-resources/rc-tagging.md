@@ -266,84 +266,85 @@ Please select 4-6 tags from the following list that are generally relevant to th
 254. psychoanalysis
 255. psychology
 256. public
-257. queer studies
-258. race
-259. radicalism
-260. reader response
-261. realism
-262. reception studies
-263. reform
-264. religion
-265. remediation
-266. reproduction
-267. republicanism
-268. resistance
-269. reviews
-270. revolution
-271. rhetoric
-272. rhythm
-273. romance
-274. Rome
-275. ruins
-276. rural
-277. Russia
-278. satire
-279. science
-280. science fiction
-281. Scotland
-282. sculpture
-283. secularism
-284. sensation
-285. sensibility
-286. sentimentality
-287. sexuality
-288. silence
-289. skepticism
-290. sky
-291. slave narrative
-292. slavery
-293. social media
-294. sociology
-295. sound
-296. South America
-297. spatiality
-298. spectacle
-299. study abroad
-300. subjectivity
-301. sublime
-302. sympathy
-303. taste
-304. teaching
-305. technology
-306. temporality
-307. textuality
-308. theater
-309. theology
-310. theory
-311. thing theory
-312. topography
-313. tourism
-314. tragedy
-315. transatlantic studies
-316. transcultural
-317. translation
-318. transnational
-319. transgender studies
-320. trauma
-321. travel
-322. uncanny
-323. utilitarianism
-324. utopia
-325. vampires
-326. video games
-327. violence
-328. vision
-329. visual culture
-330. vitalism
-331. Vodoo
-332. walking
-333. war
-334. wedding
-335. West Indies
-336. women writers
-337. working class
+257. publishing
+258. queer studies
+259. race
+260. radicalism
+261. reader response
+262. realism
+263. reception studies
+264. reform
+265. religion
+266. remediation
+267. reproduction
+268. republicanism
+269. resistance
+270. reviews
+271. revolution
+272. rhetoric
+273. rhythm
+274. romance
+275. Rome
+276. ruins
+277. rural
+278. Russia
+279. satire
+280. science
+281. science fiction
+282. Scotland
+283. sculpture
+284. secularism
+285. sensation
+286. sensibility
+287. sentimentality
+288. sexuality
+289. silence
+290. skepticism
+291. sky
+292. slave narrative
+293. slavery
+294. social media
+295. sociology
+296. sound
+297. South America
+298. spatiality
+299. spectacle
+300. study abroad
+301. subjectivity
+302. sublime
+303. sympathy
+304. taste
+305. teaching
+306. technology
+307. temporality
+308. textuality
+309. theater
+310. theology
+311. theory
+312. thing theory
+313. topography
+314. tourism
+315. tragedy
+316. transatlantic studies
+317. transcultural
+318. translation
+319. transnational
+320. transgender studies
+321. trauma
+322. travel
+323. uncanny
+324. utilitarianism
+325. utopia
+326. vampires
+327. video games
+328. violence
+329. vision
+330. visual culture
+331. vitalism
+332. Vodoo
+333. walking
+334. war
+335. wedding
+336. West Indies
+337. women writers
+338. working class
