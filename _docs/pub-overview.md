@@ -68,50 +68,49 @@ Once the proofs are approved, the volume is set for publication.
 
 1. DOCX conversion to XML (TEI)
    The assistant editor will first transform the word files into xml/tei documents using ```teigarage.tei-c.org
-   A. Select "Documents"
-   B. Select "Microsoft Word (.docx)"
-   C. Select “TEI P5 XML Document”
-   D. Select the file from your computer and click Convert. Your browser should automatically download the resulting XML file.
-   E.  Save each file to the volume folder in your local rc-git folder within the rc-tei folder and rename it according to the RC convention (“section.year.volumename.docname.xml”).
-   F. Push your changes using the  GitHub desktop application.
+   *A. Select "Documents"
+   *B. Select "Microsoft Word (.docx)"
+   *C. Select “TEI P5 XML Document”
+   *D. Select the file from your computer and click Convert. Your browser should automatically download the resulting XML file.
+   *E.  Save each file to the volume folder in your local rc-git folder within the rc-tei folder and rename it according to the RC convention (“section.year.volumename.docname.xml”).
+   *F. Push your changes using the  GitHub desktop application.
 2. TEI document structure and validation
    Begin coding by opening up the converted files in Oxygen. Each TEI document has two main parts: the TEI header and the body. Essentially the header carries all document- and site-level metadata, while the body encodes the document text proper, tying metadata tags to specific content.
    Every RC TEI document uses the same TEI header template. Specific section information, technical editor(s), dates, authors, titles, and keywords will need to be replaced for each essay, but the basic framework will remain the same. Note that after editing the header for the first essay in a volume, that header can be replicated with small changes throughout the volume.
    OxygenXML (or Atom, if configured correctly) has a validation feature for XML documents that will review your markup and flag any errors. To run the validation feature manually, you can click the page-and-checkmark icon on the toolbar. The document must validate prior to running a transformation scenario (see next section).
-   A. First, add in rc's standard header template and make the appropriate changes.
-   B. Review RC's tei guidelines and either remove any unnecessary tags (that teigarage added in) and/or add in the RC approved tags.
-   C. Save/push your changes and make sure that the document validates (aka. there shouldn't be any red markings in the side-bar area of Oxygen).
+   *A. First, add in rc's standard header template and make the appropriate changes.
+   *B. Review RC's tei guidelines and either remove any unnecessary tags (that teigarage added in) and/or add in the RC approved tags.
+   *C. Save/push your changes and make sure that the document validates (aka. there shouldn't be any red markings in the side-bar area of Oxygen).
 3. XSLT conversion to HTML
    To convert a completed TEI document to HTML for web presentation, a transformation scenario must be set up and executed. The process uses a transformation template file (XSLT) to turn the XML/TEI markup into valid HTML. RC’s XSLT files were written by TJ McLemore in 2022. Historically these templates have met almost all of RC’s needs, but from time to time a specific transformation requirement may require slight editing of the XSLT files. The XSLTs can be found in the shared GitHub repo, inside the XSLT-templates folder.
-    A. To set up a transformation scenario in OxygenXML, you’ll first need to create a “parts” file. This file essentially points to all the XML documents you will be transforming to HTML; once coding on the volume is done, all the volume’s TEI files will be listed in the parts file. Feel free to use the parts file available in the _examples folder. All parts files have an identical structure, so you can simply adapt one from any previous volume in the production drive; each volume will have a single parts file, which will be named “[volume]Parts.xml.” Open one of these files and rename / save it into your volume directory in the same folder as the volume’s TEI files.
-    B. To use the parts file, open it in OxygenXML and simply change the part code in each line to contain all the filenames of your TEI files (e.g., "praxis.2020.popkeats.rejack.xml").
-    C. Next you must configure the transformation scenario. With the parts file open, click on the wrench-and-play-symbol icon in the toolbar (“Configure Transformation Scenario”). Click “New ---> XML transformation with XSLT” to create a new scenario. Give the new scenario a name; consider giving it a generic name (e.g., “RC-parts”) since Oxygen will save it for later reuse. Leave the XML URL field as “${currentFileURL}.” Beside the XSL URL field, click the file folder icon and navigate to your local RC-Git folder, then "XSLT-templates", then "html."  Select the "html.xsl" file and click OK. Under the Transformer dropdown menu, select “Saxon-PE 10.6.” Click OK to save the scenario.
-    D. If it executes successfully, you’ll see a “Transformation Successful” message and a green light on the bottom bar. Navigate to your volume directory and look in the folder containing all the TEI files; you should now see an HTML file for each TEI file created by the transformation process.
-    E. Check for any errors and then send off  the html proofs to the volume/edition editors for final review. All corrections must be completed in xml (meaning you might have to transform the files a second time).
+    *A. To set up a transformation scenario in OxygenXML, you’ll first need to create a “parts” file. This file essentially points to all the XML documents you will be transforming to HTML; once coding on the volume is done, all the volume’s TEI files will be listed in the parts file. Feel free to use the parts file available in the _examples folder. All parts files have an identical structure, so you can simply adapt one from any previous volume in the production drive; each volume will have a single parts file, which will be named “[volume]Parts.xml.” Open one of these files and rename / save it into your volume directory in the same folder as the volume’s TEI files.
+    *B. To use the parts file, open it in OxygenXML and simply change the part code in each line to contain all the filenames of your TEI files (e.g., "praxis.2020.popkeats.rejack.xml").
+    *C. Next you must configure the transformation scenario. With the parts file open, click on the wrench-and-play-symbol icon in the toolbar (“Configure Transformation Scenario”). Click “New ---> XML transformation with XSLT” to create a new scenario. Give the new scenario a name; consider giving it a generic name (e.g., “RC-parts”) since Oxygen will save it for later reuse. Leave the XML URL field as “${currentFileURL}.” Beside the XSL URL field, click the file folder icon and navigate to your local RC-Git folder, then "XSLT-templates", then "html."  Select the "html.xsl" file and click OK. Under the Transformer dropdown menu, select “Saxon-PE 10.6.” Click OK to save the scenario.
+    *D. If it executes successfully, you’ll see a “Transformation Successful” message and a green light on the bottom bar. Navigate to your volume directory and look in the folder containing all the TEI files; you should now see an HTML file for each TEI file created by the transformation process.
+    *E. Check for any errors and then send off  the html proofs to the volume/edition editors for final review. All corrections must be completed in xml (meaning you might have to transform the files a second time).
 4. TEI corpus and metadata XSL transformation
    The final transformation necessary before you can upload a volume’s documents to the site is to create a TEI corpus file. This is the file that will import the volume’s metadata to the site. Once uploaded, it will (or should) create nodes for each essay’s abstract; link each author, contributor, and/or editor to their existing node (bio) on the RC site; populate the metadata tags for each essay; and carry any other encoded metadata into the site’s taxonomic system.
-
-    A. To create the corpus file, simply repeat the steps in the preceding section required to configure an XSLT to HTML transformation, but this time name the new scenario something else (e.g., “RC-corpus”). Navigate to the XSLT-templates folder, as above, but select the “mergetocorpus.xsl” file in the XSL URL field.
-    B. When you run the transformation, a new frame will appear at the bottom of the screen; it should contain many thousands of lines of code, as the transformation has merged the entire volume’s XML markup into a single file. Create a new XML file, use cmnd + A  shortcut and then copy-and-paste the corpus transformation output into that file, and save it in the same folder as the other TEI files as “[volume]Corpus.xml.” 
+    *A. To create the corpus file, simply repeat the steps in the preceding section required to configure an XSLT to HTML transformation, but this time name the new scenario something else (e.g., “RC-corpus”). Navigate to the XSLT-templates folder, as above, but select the “mergetocorpus.xsl” file in the XSL URL field.
+    *B. When you run the transformation, a new frame will appear at the bottom of the screen; it should contain many thousands of lines of code, as the transformation has merged the entire volume’s XML markup into a single file. Create a new XML file, use cmnd + A  shortcut and then copy-and-paste the corpus transformation output into that file, and save it in the same folder as the other TEI files as “[volume]Corpus.xml.”
 5. Cyberduck/FTP file upload
    Once you have set up a SSH connection to the RC FTP server (see the “Cyberduck setup and FTP navigation” section), you can easily upload new content to the site’s file system that can then be imported into the Drupal CMS.
-    A. Simply open Cyberduck and open your FTP connection to the site’s filebase. Navigate to the appropriate site section: romanticcircles/dev/sites/default/files/feeds
-    B. Remove any older files from "feeds" and then you can simply drag-and-drop the HTML files from the shared production drive into the volume directory (you do not need to add in the xml, corpus, or parts files).
+   * A. Simply open Cyberduck and open your FTP connection to the site’s filebase. Navigate to the appropriate site section: romanticcircles/dev/sites/default/files/feeds
+    *B. Remove any older files from "feeds" and then you can simply drag-and-drop the HTML files from the shared production drive into the volume directory (you do not need to add in the xml, corpus, or parts files).
 6. Creating a volume/edition index page.
    Before you can upload the content onto Drupal, you will need to create an index/landing page for each volume/edition.
-   A. Navigate to and select "Content" in the top menu.
-   B. Select the blue button "Add content."
-   C. Select Pedagogies/Editions/Praxis Publication
-   D. Put in all relevant information, including the banner image (1500 x 500 pixels), and save.
+   *A. Navigate to and select "Content" in the top menu.
+   *B. Select the blue button "Add content."
+   *C. Select Pedagogies/Editions/Praxis Publication
+   *D. Put in all relevant information, including the banner image (1500 x 500 pixels), and save.
 7. Drupal content import
    Once you’ve uploaded all the volume’s files to the server via FTP, it’s time to import them into the Drupal CMS. The feeds importers are set up to automatically generate or update nodes for each discrete piece of content brought in through the import process. To upload a volume’s content, you must perform two separate but related imports: (1) the HTML page content, and (2) the TEI corpus. The feeds importers are set up so that the nodes created in the HTML importation process are updated by the TEI corpus files (or vice versa).
-    A. Select "Content" from the top menu and then select the "Feeds" tab.
-    B. First use the appropriate XML importer by clicking the "Edit" button. Remove any old files, upload the volume/edition's corpus file from your local RC-Git folder, and select "import."
-    C. Next, use the appropriate HTML importer by selecting the "Edit" button. Select the "Save and import" button.
-    D. Now navigate back to the Content section of the site to make sure that all of the new nodes have been created.
+    *A. Select "Content" from the top menu and then select the "Feeds" tab.
+    *B. First use the appropriate XML importer by clicking the "Edit" button. Remove any old files, upload the volume/edition's corpus file from your local RC-Git folder, and select "import."
+    *C. Next, use the appropriate HTML importer by selecting the "Edit" button. Select the "Save and import" button.
+    *D. Now navigate back to the Content section of the site to make sure that all of the new nodes have been created.
 8. Final edits/formatting before publication
-   A. Review each section of the edition/volume in Content by simply clicking on each title.
-   B. Select "Edit" to make any necessary changes, including:
+   *A. Review each section of the edition/volume in Content by simply clicking on each title.
+   *B. Select "Edit" to make any necessary changes, including:
     - Adding in the article-parent_link
     - Selecting the "Source" button for the Abstract, Article, and Notes sections
     - Removing unnecessary formatting from the Abstract section (all you need is the `<p class="noCount>` tag)
