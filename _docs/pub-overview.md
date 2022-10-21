@@ -67,7 +67,7 @@ After these errata are corrected and the tech editors receive a go-ahead from th
 Once the proofs are approved, the volume is set for publication.
 
 1. DOCX conversion to XML (TEI)
-   The assistant editor will first transform the word files into xml/tei documents using ```teigarage.tei-c.org
+   The assistant editor will first transform the word files into xml/tei documents using <teigarage.tei-c.org>
    - Select "Documents"
    - Select "Microsoft Word (.docx)"
    - Select “TEI P5 XML Document”
@@ -112,10 +112,10 @@ Once the proofs are approved, the volume is set for publication.
 8. Final edits/formatting before publication
    - Review each section of the edition/volume in Content by simply clicking on each title.
    - Select "Edit" to make any necessary changes, including:
-   + Adding in the article-parent_link
-   + Selecting the "Source" button for the Abstract, Article, and Notes sections
-   + Removing unnecessary formatting from the Abstract section (all you need is the `<p class="noCount>` tag)
-   + Remove the unnecessary author/affiliation information from the Article section
+   * Adding in the article-parent_link
+   * Selecting the "Source" button for the Abstract, Article, and Notes sections
+  * Removing unnecessary formatting from the Abstract section (all you need is the `<p class="noCount>` tag)
+  * Remove the unnecessary author/affiliation information from the Article section
   
 ## Marketing copy
 
