@@ -14,297 +14,298 @@ Please select 4-6 tags from the following list that are generally relevant to th
 2. adaptation
 3. aesthetics
 4. affect
-5. Africa
+5. africa
 6. agency
 7. aging
 8. agriculture
 9. allegory
 10. ambiguity
-11. America
+11. america
 12. animals
 13. animism
-14. Antarctica
+14. antarctica
 15. anthropocene
 16. antiquarianism
-17. appropriation
-18. archive
-19. Asia
-20. assemblage
-21. astronomy
-22. atheism
-23. Australia
-24. author
-25. autobiography
-26. autonomy
-27. beauty
-28. bible
-29. bibliography
-30. bibliomania
-31. bibliotherapy
-32. biography
-33. biopolitics
-34. birds
-35. Black Atlantic
-36. bluestocking
-37. body
-38. botany
-39. Buddhism
-40. Byromania
-41. canon
-42. capitalism
-43. Caribbean
-44. caricature
-45. cartoon
-46. Catholicism
-47. celebrity
-48. charity
-49. childhood
-50. children's literature
-51. China
-52. chivalry
-53. Christianity
-54. chronology
-55. circulation
-56. class
-57. climate change
-58. close reading
-59. clouds
-60. code switching
-61. collaboration
-62. colonialism
-63. comedy
-64. communism
-65. community
-66. comparative literature
-67. conscious
-68. constellation
-69. consumerism
-70. contemporary culture
-71. contemporary poetry
-72. Continental
-73. copyright
-74. correspondence
-75. cosmopolitanism
-76. creolization
-77. Crimean War
-78. critical theory
-79. culture
-80. cyberpunk
-81. death
-82. decolonization
-83. deconstruction
-84. democracy
-85. desire
-86. diaspora
-87. digital humanities
-88. disability
-89. disaster
-90. disease
-91. domesticity
-92. drama
-93. dream
-94. drugs
-95. duality
-96. East Asia
-97. East India Company
-98. ecology
-99. ecosystems
-100. editing
-101. elegy
-102. embodiment
-103. empire
-104. empiricism
-105. enclosure
-106. Enlightenment
-107. entanglement
-108. eugenics
-109. Eastern Europe
-110. Europe
-111. environment
-112. environmentalism
-113. epistemology
-114. epistolary
-115. ethics
-116. evolution
-117. existentialism
-118. experience
-119. exploration
-120. fanfiction
-121. fantasy
-122. fascism
-123. fashion
-124. fear
-125. feeling
-126. feminism
-127. film
-128. food
-129. fragment
-130. freedom
-131. freemasonry
-132. French Revolution
-133. gender
-134. gender roles
-135. genocide
-136. genre
-137. German Romanticism
-138. global
-139. gothic
-140. grammar
-141. Haitian Revolution
-142. Hinduism
-143. Hispanosphere
-144. historicism
-145. historiography
-146. history
-147. homoeroticism
-148. homosexuality
-149. human rights
-150. humanism
-151. humanities
-152. hybridity
-153. iconoclasm
-154. iconology
-155. idealism
-156. identity
-157. ideology
-158. imagination
-159. immortality
-160. imperialism
-161. incest
-162. India
-163. individualism
-164. Industrial Revolution
-165. interdisciplinary
-166. intersectionality
-167. Ireland
-168. Islam
-169. Italy
-170. Jacobins
-171. Jamaica
-172. Japan
-173. Jewish authors
-174. journal-keeping
-175. journalism
-176. Kabbalah
-177. labor
-178. Lake District
-179. landscape
-180. language
-181. Latin America
-182. law
-183. liberty
-184. literary criticism
-185. love
-186. lyric
-187. machine
-188. magic lantern
-189. manners
-190. mapping
-191. manuscripts
-192. Maroons
-193. marriage
-194. Marxism
-195. masculinity
-196. masochism
-197. materialism
-198. media
-199. medicine
-200. melodrama
-201. memory
-202. Mexico
-203. Middle Ages
-204. middle class
-205. Middle East
-206. mobility
-207. modernity
-208. monarchy
-209. morality
-210. mountaineering
-211. movement
-212. multimedia
-213. museum
-214. music
-215. mythology
-216. Napoleonic wars
-217. nationalism
-218. natural history
-219. nature
-220. negative capability
-221. network
-222. new criticism
-223. new historicism
-224. new materialism
-225. new media
-226. New Zealand
-227. Norway
-228. novel
-229. Obi
-230. ode
-231. orality
-232. Orientalism
-233. orthodoxy
-234. pandemic
-235. panorama
-236. paradox
-237. passion
-238. performance
-239. periodical
-240. periodization
-241. perspective
-242. Peterloo
-243. phenomenology
-244. philology
-245. philosophy
-246. photography
-247. phrenology
-248. picture theory
-249. picturesque
-250. place
-251. plague
-252. play
-253. politics
-254. popular culture
-255. pornography
-256. postcolonial
-257. post-romantic
-258. poverty
-259. presentism
-260. print culture
-261. propaganda
-262. prophecy
-263. prosody
-264. Protestantism
-265. Protestant Reformation
-266. psychoanalysis
-267. psychology
-268. public
-269. publishing
-270. queer studies
-271. race
-272. radicalism
-273. reader response
-274. realism
-275. reception studies
-276. reform
-277. religion
-278. remediation
-279. reproduction
-280. republicanism
-281. resistance
-282. reviews
-283. revision
+17. apocalypse
+18. appropriation
+19. archive
+20. asia
+21. assemblage
+22. astronomy
+23. atheism
+24. australia
+25. author
+26. autobiography
+27. autonomy
+28. beauty
+29. bible
+30. bibliography
+31. bibliomania
+32. bibliotherapy
+33. biography
+34. biopolitics
+35. birds
+36. black atlantic
+37. bluestocking
+38. body
+39. botany
+40. buddhism
+41. byromania
+42. canon
+43. capitalism
+44. Caribbean
+45. caricature
+46. cartoon
+47. catholicism
+48. celebrity
+49. charity
+50. childhood
+51. children's literature
+52. china
+53. chivalry
+54. christianity
+55. chronology
+56. circulation
+57. class
+58. climate change
+59. close reading
+60. clouds
+61. code switching
+62. collaboration
+63. colonialism
+64. comedy
+65. communism
+66. community
+67. comparative literature
+68. conscious
+69. constellation
+70. consumerism
+71. contemporary culture
+72. contemporary poetry
+73. continental
+74. copyright
+75. correspondence
+76. cosmopolitanism
+77. creolization
+78. crimean war
+79. critical theory
+80. culture
+81. cyberpunk
+82. death
+83. decolonization
+84. deconstruction
+85. democracy
+86. desire
+87. diaspora
+88. digital humanities
+89. disability
+90. disaster
+91. disease
+92. domesticity
+93. drama
+94. dream
+95. drugs
+96. duality
+97. east asia
+98. east india company
+99. ecology
+100. ecosystems
+101. editing
+102. elegy
+103. embodiment
+104. empire
+105. empiricism
+106. enclosure
+107. Enlightenment
+108. entanglement
+109. eugenics
+110. eastern europe
+111. europe
+112. environment
+113. environmentalism
+114. epistemology
+115. epistolary
+116. ethics
+117. evolution
+118. existentialism
+119. experience
+120. exploration
+121. fanfiction
+122. fantasy
+123. fascism
+124. fashion
+125. fear
+126. feeling
+127. feminism
+128. film
+129. food
+130. fragment
+131. freedom
+132. freemasonry
+133. french revolution
+134. gender
+135. gender roles
+136. genocide
+137. genre
+138. german romanticism
+139. global
+140. gothic
+141. grammar
+142. haitian revolution
+143. hinduism
+144. hispanosphere
+145. historicism
+146. historiography
+147. history
+148. homoeroticism
+149. homosexuality
+150. human rights
+151. humanism
+152. humanities
+153. hybridity
+154. iconoclasm
+155. iconology
+156. idealism
+157. identity
+158. ideology
+159. imagination
+160. immortality
+161. imperialism
+162. incest
+163. india
+164. individualism
+165. industrial revolution
+166. interdisciplinary
+167. intersectionality
+168. ireland
+169. islam
+170. italy
+171. jacobins
+172. jamaica
+173. japan
+174. jewish authors
+175. journal-keeping
+176. journalism
+177. kabbalah
+178. labor
+179. lake district
+180. landscape
+181. language
+182. latin america
+183. law
+184. liberty
+185. literary criticism
+186. love
+187. lyric
+188. machine
+189. magic lantern
+190. manners
+191. mapping
+192. manuscripts
+193. maroons
+194. marriage
+195. marxism
+196. masculinity
+197. masochism
+198. materialism
+199. media
+200. medicine
+201. melodrama
+202. memory
+203. Mexico
+204. middle ages
+205. middle class
+206. middle east
+207. mobility
+208. modernity
+209. monarchy
+210. morality
+211. mountaineering
+212. movement
+213. multimedia
+214. museum
+215. music
+216. mythology
+217. napoleonic wars
+218. nationalism
+219. natural history
+220. nature
+221. negative capability
+222. network
+223. new criticism
+224. new historicism
+225. new materialism
+226. new media
+227. new zealand
+228. norway
+229. novel
+230. obi
+231. ode
+232. orality
+233. orientalism
+234. orthodoxy
+235. pandemic
+236. panorama
+237. paradox
+238. passion
+239. performance
+240. periodical
+241. periodization
+242. perspective
+243. peterloo
+244. phenomenology
+245. philology
+246. philosophy
+247. photography
+248. phrenology
+249. picture theory
+250. picturesque
+251. place
+252. plague
+253. play
+254. politics
+255. popular culture
+256. pornography
+257. postcolonial
+258. post-romantic
+259. poverty
+260. presentism
+261. print culture
+262. propaganda
+263. prophecy
+264. prosody
+265. Protestantism
+266. protestant reformation
+267. psychoanalysis
+268. psychology
+269. public
+270. publishing
+271. queer studies
+272. race
+273. radicalism
+274. reader response
+275. realism
+276. reception studies
+277. reform
+278. religion
+279. remediation
+280. reproduction
+281. republicanism
+282. resistance
+283. reviews
+284. revision
 284. revolution
 285. rhetoric
 286. rhythm
 287. romance
-288. Rome
+288. rome
 289. ruins
 290. rural
-291. Russia
+291. russia
 292. satire
 293. science
 294. science fiction
-295. Scotland
+295. scotland
 296. sculpture
 297. secularism
 298. sensation
@@ -355,10 +356,10 @@ Please select 4-6 tags from the following list that are generally relevant to th
 343. vision
 344. visual art
 345. vitalism
-346. Vodoo
+346. vodoo
 347. walking
 348. war
 349. wedding
-350. West Indies
+350. west indies
 351. women writers
 352. working class
