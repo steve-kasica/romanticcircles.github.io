@@ -56,7 +56,7 @@ Please select 4-6 tags from the following list that are generally relevant to th
 44. byromania
 45. canon
 46. capitalism
-47. Caribbean
+47. caribbean
 48. caricature
 49. cartoon
 50. catholicism
