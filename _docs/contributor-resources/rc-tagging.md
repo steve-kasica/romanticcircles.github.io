@@ -325,7 +325,7 @@ Please select 4-6 tags from the following list that are generally relevant to th
 312. social media
 313. sociology
 314. sound
-315. South America
+315. south america
 316. spatiality
 317. spectacle
 318. spirituality
