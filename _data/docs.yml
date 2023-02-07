@@ -11,11 +11,6 @@ toc:
 
   - title: Production Documentation
     docs:
-      - page: acquia-guide
-        subsection:
-          - page: cloning-site
-      - page: drupal-guide
-      - page: git-guide
       - page: copy-editing-guide
       - page: docpreparation
       - page: tei-guidelines
@@ -26,6 +21,21 @@ toc:
       - page: digital-pub-guide
       - page: databases
       - page: cheatsheet
+
+  - title: Technical Documentation
+    docs:
+      - page: drupal-guide
+        subsection: 
+          - page: admin-menus
+          - page: nav-editing
+          - page: drupal-components
+      - page: acquia-guide
+        subsection:
+          - page: cloning-site
+      - page: rc-git
+        subsection:
+          - page: git-install-clone
+          - page: git-guide
 
   - title: Contributor Resources
     docs:

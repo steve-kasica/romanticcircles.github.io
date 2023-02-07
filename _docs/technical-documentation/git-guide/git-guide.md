@@ -3,23 +3,6 @@ title: RC Git Guide
 permalink: /docs/git-guide/
 ---
 
-Romantic Circles uses git to track and synchronize the code and files in all its projects. If you'll be working on any of our coding or web initiatives, you'll need a quick crash course on what git is and how to use it. This document should give you everything you need to get started with git; for installation instructions, skip to the "Installing Git" section below.
-
-RC's public repos at GitHub can be found at [https://github.com/romanticcircles](https://github.com/romanticcircles).
-
-## About git
-
-Git is a version control system (VCS) used to track and log the history of changes made to source code (essentially a file system and its individual files) shared among many collaborators. It is a distributed VCS, meaning all files and code are stored locally on the computers of all individual contributors, with only the changes to these files being stored on a centralized remote server, which git refers to as the *remote origin* (or just *origin*). All changes are stored in what git calls a *repository*, or *repo*, which lives in a (hidden) folder called **/.git** at the root of your project folder. RC uses two git hosting services as remotes to centrally track its code: (1) GitHub and (2) Acquia Cloud Platform. RC's site code, its XSLT templates and TEI files, and its associated project files are divided among four repositories (in parentheses, the remote host and repo name):
-
-1. Source code for romantic-circles.org (Acquia Cloud Platform: romanticcircles)
-2. XSLT templates (GitHub: XSLT-templates)
-3. TEI archives (GitHub: rc-tei)
-4. The code for this documentation site (GitHub: romanticcircles.github.io)
-
-RC's GitHub repos are public, meaning they can be viewed and cloned by any public user (though to push changes back to the origin requires organizational membership). The main site code, located on Acquia's git server, requires access to the Acquia Cloud Platform and SSH public key authentication for access. See the Acquia Cloud Platform section for more info.
-
-For more about git, learn more about the software and its community development at [https://git-scm.com/](https://git-scm.com/).
-
 ## Breaking it down
 
 Essentially git is just a bit of software that can live inside any of the folders on your computer to make sure they stay synchronized with your team members' folders anywhere in the world. This is, as you'd imagine, incredibly helpful when you're working on a complex site or application with a bunch of other people.
@@ -68,25 +51,7 @@ At some point in using git, you'll likely encounter an error message, which will
 
 ## Using Git
 
-The following sections will walk you through installation and basic use of git.
-
-### Installing and configuring git
-
-> **On MacOS**: first [install homebrew](https://brew.sh/) using the command line (in your terminal app), then simply run the command `$ brew install git` to install git. (Click here for git org's instructions.)
->
-> **On Windows**: [download the most recent git package](https://git-scm.com/download/win) and install it.
-
-You can now use git from your terminal with the command `$ git`. Let's take a moment to set up your profile.
-
-Every time you commit changes to a git repo, they're stamped with your user info, which you'll need to supply by entering the following two commands in your terminal window:
-
-```zsh
-$ git config --global user.name "John Doe"
-[The shell will not respond, but the user name has been written to the git config file]
-$ git config --global user.email johndoe@example.com
-```
-
-That's it! You're all set up to use git.
+The following sections will walk you through basic use of git once you've [installed and configured](git-install-clone.md) it.
 
 ### Git Tools
 
