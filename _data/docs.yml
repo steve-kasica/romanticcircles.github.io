@@ -46,6 +46,7 @@ toc:
       - page: acquia-guide
         subsection: 
           - page: cloning-site
+          - page: ssh-keys
       - page: rc-git
         subsection:
           - page: git-install-clone

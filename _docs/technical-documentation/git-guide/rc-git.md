@@ -18,4 +18,4 @@ Git is a version control system (VCS) used to track and log the history of chang
 
 RC's GitHub repos are public, meaning they can be viewed and cloned by any public user (though to push changes back to the origin requires organizational membership). The main site code, located on Acquia's git server, requires access to the Acquia Cloud Platform and SSH public key authentication for access. See the Acquia Cloud Platform section for more info.
 
-For more about git, learn more about the software and its community development at [https://git-scm.com/](https://git-scm.com/).
+For more about git, read more about the software and its community development at [https://git-scm.com/](https://git-scm.com/).
