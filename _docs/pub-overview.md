@@ -1,5 +1,5 @@
 ---
-title: Digital Publishing @ RC
+title: Digital Publishing Overview
 permalink: /docs/pub-overview/
 ---
 

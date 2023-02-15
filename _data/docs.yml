@@ -2,24 +2,38 @@ toc:
   - title: RC Handbook
     docs:
       - page: home
-      - page: introduction
+      - page: site-sections
       - page: rc-position-descriptions
-        url: rc-position-descriptions.html
-      - page: tech-stack
       - page: pub-overview
+      - page: dev-overview
+      - page: tech-stack
       - page: comms-resources
 
   - title: Production Documentation
     docs:
+      - page: prod-schedules
+      - page: file-management
+      - page: file-prep
       - page: copy-editing-guide
+        subsection:
+          - page: ce-tips
+          - page: query-guide
+          - page: accepting-changes
+          - page: ce-house-style
       - page: docpreparation
       - page: tei-guidelines
         subsection:
           - page: tei-walkthrough
           - page: rc-tei-header
           - page: rc-tei-style
+          - page: xslt-trans
       - page: digital-pub-guide
-      - page: databases
+        subsection:
+          - page: drupal-import
+          - page: ftp-upload
+          - page: media-sourcing
+          - page: vol-proofing
+      - page: pub-ad
       - page: cheatsheet
 
   - title: Technical Documentation
@@ -30,12 +44,13 @@ toc:
           - page: nav-editing
           - page: drupal-components
       - page: acquia-guide
-        subsection:
+        subsection: 
           - page: cloning-site
       - page: rc-git
         subsection:
           - page: git-install-clone
           - page: git-guide
+      - page: databases
 
   - title: Contributor Resources
     docs:
