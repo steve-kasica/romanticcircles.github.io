@@ -1,7 +1,7 @@
 ---
-title: Home
+title: Welcome to the RC Handbook
 permalink: /docs/home/
-redirect_from: /docs/index.html
+
 ---
 
 ## About Romantic Circles

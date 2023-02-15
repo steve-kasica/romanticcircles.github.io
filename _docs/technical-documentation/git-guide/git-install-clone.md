@@ -1,6 +1,6 @@
 ---
 title: Drupal Guide
-permalink: /docs/drupal-guide/
+permalink: /docs/git-install-clone/
 ---
 
 ## Installing and configuring git
