@@ -34,7 +34,6 @@ toc:
           - page: media-sourcing
           - page: vol-proofing
       - page: pub-ad
-      - page: cheatsheet
 
   - title: Technical Documentation
     docs:
@@ -45,13 +44,17 @@ toc:
           - page: drupal-components
       - page: acquia-guide
         subsection: 
-          - page: cloning-site
           - page: ssh-keys
       - page: rc-git
         subsection:
           - page: git-install-clone
           - page: git-guide
-      - page: databases
+      - page: jekyll-github
+        subsection:
+          - page: install-jekyll
+          - page: jekyll-site-logic
+          - page: extend-features
+          - page: cheatsheet
 
   - title: Contributor Resources
     docs:
