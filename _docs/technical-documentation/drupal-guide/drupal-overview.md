@@ -1,5 +1,6 @@
 ---
 title: Drupal Overview
+permalink: /docs/drupal-overview/
 ---
 
 The RC site runs on a content management system (CMS) called Drupal, which is an open-source framework that allows for expanded functionality and adaptability through “modules.” This makes for a very powerful but extremely complex (and often nonintuitive) platform that can adapt to RC’s various DH initiatives and needs to store and leverage metadata across site sections and content types. Drupal supports a large number of large-scale government, education, and industry websites, including NASA, Tesla, GE, Whole Foods, Harvard University, lots of ski resorts, and, yes, the University of Colorado Boulder (though this site is wholly unrelated to the RC site).
