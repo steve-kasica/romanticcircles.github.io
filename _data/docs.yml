@@ -37,7 +37,7 @@ toc:
 
   - title: Technical Documentation
     docs:
-      - page: drupal-guide
+      - page: drupal-overview
         subsection: 
           - page: admin-menus
           - page: nav-editing
