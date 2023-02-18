@@ -5,8 +5,6 @@ permalink: /docs/nav-editing/
 
 This page provides a basic guide to navigating the various menus of the Drupal admin UI, to Drupal's quick edit ("contextual") links, and to the node editing pages used to create and modify content.
 
-# Drupal's Admin UI Menus
-
 The frontend admin UI toolbar will appear once you've logged into Drupal as an admin user (@ romantic-circles.org/login). It consists of the following menus:
 
 ## Top-bar items
