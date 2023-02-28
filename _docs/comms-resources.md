@@ -20,7 +20,7 @@ The following links will aid you in your self-directed learning process. As you 
 - [Oxygen XML tutorial](https://www.oxygenxml.com/doc/versions/23.0/ug-editor/topics/getting-started-intro.html)
 - [StackOverflow](https://stackoverflow.com/) — online community of coders and problem solvers; if you have an issue, Google the error message and you'll likely find a solution here
 - [freeCodeCamp](https://forum.freecodecamp.org/) — online coding community with resources, tutorials, and help
-- [OxGarage TEI conversion](https://oxgarage.tei-c.org/) — converts common text formats to XML
+- [TEIGarage TEI conversion](https://teigarage.tei-c.org/) — converts common text formats to XML
 - [GitHub](https://github.com/)
 - [RC's GitHub Repos](https://github.com/romanticcircles/)
 
