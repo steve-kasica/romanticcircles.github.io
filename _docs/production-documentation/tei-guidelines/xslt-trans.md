@@ -1,5 +1,5 @@
 ---
-title: TEI to HTML Transformation
+title: TEI to HTML and Corpus Transformations
 permalink: /docs/xslt-trans/
 ---
 
@@ -43,7 +43,7 @@ Open each HTML file to ensure the transformation has successfully rendered the t
 
 The final transformation necessary before you can upload a volume’s documents to the site is to create a TEI corpus file. This is the file that will import the volume’s metadata to the site; it is essentially a single XML document that merges the content of all the volume's TEI. Once uploaded, it will create nodes for each essay’s abstract; link each author, contributor, and/or editor to their existing node (bio) on the RC site; populate the metadata tags for each essay; and carry any other encoded metadata into the site’s taxonomy system.
 
-To create the corpus file, simply repeat the steps in the preceding section required to configure an XSLT to HTML transformation, but this time name the new scenario something else (e.g., “CORPUS”). Navigate to the `html` directory, as above, but select the “mergetocorpus.xsl” file in the XSL URL field.
+To create the corpus file, simply repeat the steps in the preceding section required to configure an XSLT to HTML transformation, but this time name the new scenario something else (e.g., “CORPUS”). Navigate to the `html` directory, as above, but select the “mergetoCorpus.xsl” file in the XSL URL field.
 
 ![Corpus transformation scenario config in OxygenXML](/assets/img/corpus-config.png)
 

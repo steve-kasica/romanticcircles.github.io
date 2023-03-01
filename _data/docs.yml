@@ -55,6 +55,7 @@ toc:
           - page: jekyll-site-logic
           - page: extend-features
           - page: cheatsheet
+      - page: rc-languages
 
   - title: Contributor Resources
     docs:
