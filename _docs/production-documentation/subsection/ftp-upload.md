@@ -35,7 +35,7 @@ Each site section folder contains a list of folders, one for each volume publish
 
 Uploading files to the server is as simple as dragging them from your hard drive into a location in the FTP, just as you'd do on your local hard drive. There are generally two types of files you'll upload to the FTP during the production process:
 
-1. HTML files to be parsed by the Drupal's feeds modules; and 
+1. HTML files to be parsed by the Drupal's feeds modules; and
 2. images or other media.
 
 For an overview of the former process, see the previous section, [Drupal Feeds Importers](feeds-importers.md); HTML files should be placed in the "feeds" folder at the path provided above (sites/default/files).

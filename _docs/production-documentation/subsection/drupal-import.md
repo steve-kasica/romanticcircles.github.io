@@ -34,7 +34,7 @@ The process of setting up an importer seems rather intimidating, but through a b
 
 ## Running a feeds import
 
-To "run" a feeds import, navigate to the "Feeds" tab of the admin "Content" menu. 
+To "run" a feeds import, navigate to the "Feeds" tab of the admin "Content" menu.
 
 Most of the time you'll be (re)running a feed that already exists and pointing its fetcher to a different file or directory. Note that, from the main Feeds content page, two importers already exist for Praxis and Editions content, one "XML" and one "HTML."
 
