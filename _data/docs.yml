@@ -29,6 +29,7 @@ toc:
           - page: xslt-trans
       - page: digital-pub-guide
         subsection:
+          - page: toc-creation
           - page: drupal-import
           - page: ftp-upload
           - page: media-sourcing

@@ -9,7 +9,7 @@ RC's Drupal site uses three separate contributed modules to facilitate the impor
 - **Feeds Extensible Parsers** — extends the feeds module to enable the importation of XML documents and, vitally, parse them via XPath.
 - **Feeds Tamper** — extends the feeds module to enable the transformation of content as part of the import process (e.g., a tamper could perform a search-and-replace on all imported content, removing certain words or tags).
 
-These three modules work seamlessly together in Drupal's backend to enable you to **create/configure** and then **run** an importer. The first part of this guide covers the configuration of new or existing importers. If you simply need instructions on importing content using an existing importer, skip to this page's second section, "Running a feeds import."
+These three modules work seamlessly together in Drupal's backend to enable you to **create/configure** and then **run** an importer. The first part of this guide covers the configuration of new or existing importers. If you simply need instructions on importing content using an existing importer, skip to this page's second section, [Running a feeds import](#run-import).
 
 ## Creating, configuring, and/or editing importers
 
@@ -22,6 +22,7 @@ On each feed type configuration page, you'll see several tabs:
 - **Mapping** — controls the behavior of the parser via Xpath. Set a "Context" for the base query, then select a "Target" field (the choice of fields is determined by the set content type). For each target field, you can configure a "Source" from the imported file(s). For new sources, you'll need to "Configure new XML XPath source"; this is how the parser knows how to find a piece of content by an XML/HTML tag within the imported document. Under configuration, you can tell the parser to treat a field's value as unique (the title will always be unique); set how to reference, or "tie together," fields (usually by Title); and set whether entities should be autocreated (which could be useful if importing taxonomy terms, for instance). To configure XPath sources, you'll likely need the [RC Language Guide](../rc-languages/).
 - **Tamper** — for each mapping target, you can set a "tamper" from this page that will alter or change the behavior of the imported content. Simply select "Add plugin" under the appropriate mapping target. An example of a simple tamper used on most importers is a filter to enforce contextual links, stripping the base domain from all imported RC links; to set it up, simply add the "Find replace" plugin, set it to find `https://romantic-circles.org/`, and leave the replacement field blank (which will simply delete the "found" text). You can also use this functionality to, for instance, force the importer to import content with a specific node as parent content (as is necessary, for example, when importing mapping data).
 - **Custom sources** — this is an extremely useful tab that displays all your XPath configurations in a single place and allows you to edit them. Each target label is listed alongside its XPath mapping.
+![Custom Sources screenshot with XPath mappings](/assets/img/Xpath-mapping.png)
 - **Manage fields** — can be used to add a new field to the import. Do not use.
 - **Manage form display** — simply configures how information about the importer itself is captured in the database and displayed. No need to use.
 - **Manage display** — controls the UI of the importer, which would be useful for periodic imports and the like. No need to use.
@@ -32,6 +33,7 @@ The process of setting up an importer seems rather intimidating, but through a b
 
 -----
 
+<a name="run-import"/>
 ## Running a feeds import
 
 To "run" a feeds import, navigate to the "Feeds" tab of the admin "Content" menu.
