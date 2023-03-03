@@ -1,5 +1,5 @@
 ---
-title: RC Git Guide
+title: Using Git—An Overview
 permalink: /docs/git-guide/
 ---
 
@@ -102,9 +102,3 @@ More advanced commands & undo options (use with caution!):
   - Use `$ git reset --hard` as often as you need! It will erase everything you've done since the last commit and return your local repo to that state. This can be *quite* useful.
 
 If you'd like to learn more about git, [Atlassian has a fantastic in-depth tutorial](https://www.atlassian.com/git/tutorials/what-is-version-control) that expands on this guide & digs into some more advanced functions.
-
-## Connecting to RC's git repositories
-
-When you join the RC team — for however long! — the assistant editors will provide your GitHub account (which you'll need to create in advance at [this page](https://github.com/signup)) with access to the Romantic Circles organization on GitHub.
-
-As noted above, anyone can clone a public GitHub repo, but in order to **push** to an RC repo you'll need elevated privileges. Begin by cloning one of RC's public repos to an easy-to-access place on your computer (our RC machines have a desktop folder called "RC-GIT" into which we clone all our repos).  Remember that the git url used to clone the repo can be found by clicking on the green "Code" button within each repo at [https://github.com/romanticcircles](https://github.com/romanticcircles).

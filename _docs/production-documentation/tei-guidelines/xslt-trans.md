@@ -1,11 +1,11 @@
 ---
-title: TEI to HTML and Corpus Transformations
+title: XSLT —> TEI to HTML & Corpus Transformations
 permalink: /docs/xslt-trans/
 ---
 
 Once all files in a production volume are fully encoded in TEI and each file's TEI validates in Oxygen, it's time to convert these completed XML files to HTML so that they can be presented on the web. You'll continue to use OxygenXML for this process.
 
->**NOTE:** The following guide assumes that you're working from a local clone of RC's TEI repository on GitHub. If for some reason you're not working inside the repo, you should clone it using the steps in the [Git Guide](../git-guide/) and move all your TEI files into the current production volume's folder.
+>**NOTE:** The following guide assumes that you're working from a local clone of RC's TEI repository on GitHub. If for some reason you're not coding from inside the RC-TEI repo, you should clone it using the steps in the [Git Guide](../git-guide/) and move all your TEI files into the current production volume's folder.
 
 ## About the transformation process
 

@@ -27,8 +27,10 @@ The TEI consortium provides a tool called [TEIGarage](https://oxgarage.tei-c.org
 To convert a document:
 
 1. Go to [https://teigarage.tei-c.org/](https://oxgarage.tei-c.org/).
-2. Click "Documents," then select the appropriate conversion. Per RC submission guidelines, this will almost always involve converting *from* "**Microsoft Word (.docx)**" *to* "**TEI P5 XML Document**."
+2. Click "Documents," then select the appropriate conversion: *from* "**Microsoft Word (.docx)**" *to* "**TEI P5 XML Document**."
 3. Simply upload your file at the prompt and your browser will download the converted XML file (in some browsers, a download prompt might pop up).
+4. Save each file to the volume folder in your local rc-git folder within the rc-tei folder and rename it according to the RC convention (“section.year.volumename.docname.xml”).
+5. Push your changes using the  GitHub desktop application (or via a terminal instance).
 
 The conversion process is far from perfect, but it will get you started by creating the basic document structure and consistently inserting (often wrong) tags that can be quickly corrected using OxygenXML’s search-and-replace function.
 

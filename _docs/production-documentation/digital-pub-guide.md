@@ -21,7 +21,8 @@ The publication process involves 8 distinct steps, which are covered in detail o
    - One HTML file for each essay, produced via transformation from TEI (in the TEI GitHub repo);
    - One XML corpus file for the entire volume, containing all TEI in a single doc (in the TEI GitHub repo);
    - Any images or other media linked by the volume, including volume TOC page banner (stored in RC's "production sync" shared Google Drive).
-2. Create the volume TOC page.
+2. Create the volume Table of Contents and contributor bio pages.
+   - Create contributor pages for any contemporary or historical authors who don't already have bio pages on the site.
    - The TOC page should *NOT* be published until proofing is complete.
    - If autogeneration of the TOC is not desired for the volume, remove the "TOC block" from the layout builder.
 3. Upload all necessary files to the FTP:

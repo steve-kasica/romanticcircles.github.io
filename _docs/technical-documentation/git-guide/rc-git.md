@@ -1,5 +1,5 @@
 ---
-title: Git Guide
+title: RC Git Guide
 permalink: /docs/rc-git/
 ---
 
@@ -19,3 +19,9 @@ Git is a version control system (VCS) used to track and log the history of chang
 RC's GitHub repos are public, meaning they can be viewed and cloned by any public user (though to push changes back to the origin requires organizational membership). The main site code, located on Acquia's git server, requires access to the Acquia Cloud Platform and SSH public key authentication for access. See the Acquia Cloud Platform section for more info.
 
 For more about git, read more about the software and its community development at [https://git-scm.com/](https://git-scm.com/).
+
+## Connecting to RC's git repositories
+
+When you join the RC team — for however long! — the assistant editors will provide your GitHub account (which you'll need to create in advance at [this page](https://github.com/signup)) with access to the Romantic Circles organization on GitHub. The git url used to clone **any** public repo can be found by clicking on the green "Code" button within that repo; RC's public repos can be cloned (by anyone) at [https://github.com/romanticcircles](https://github.com/romanticcircles).
+
+As noted, anyone can clone a public GitHub repo, but in order to **push** to an RC repo you'll need elevated privileges. Begin by cloning one of RC's public repos to an easy-to-access place on your computer (our RC machines have a desktop folder called "RC-GIT" into which we clone all our repos). A guide to doing so is provided in the next section, [Installing Git and Cloning Repos](../git-install-clone/).
