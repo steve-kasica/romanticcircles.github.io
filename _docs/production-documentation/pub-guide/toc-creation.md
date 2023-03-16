@@ -49,7 +49,9 @@ For more complex editions, it becomes necessary to bypass the view that auto-gen
 
 Custom TOC page creation requires manual coding of the HTML to present the page. For the sake of clarity, RC editors have installed Bootstrap functionality, which provides CSS classes for easy formatting of page entities such as accordion menus, tables, and the like.
 
-Before proceeding with a custom TOC, you'll need to create a new TOC page as described above but alter its layout so that it no longer contains the view that autogenerates TOC titles. From the page view, click "Layout" (or, from the "Edit" view, just select the "Layout" tab). Ensure that the dialog says that "You are editing the layout for this [Section] Publication content item" and *not* the template for *all* content items.
+Before proceeding with a custom TOC, you'll need to create a new TOC page as described above but alter its layout so that it no longer contains the view that autogenerates TOC titles. This process requires familiarity with Drupal's **Layout Builder** function; see the Layout Builder section of the [Drupal Components](../drupal-components) page in the Technical Documentation before continuing.
+
+From the page view, click "Layout" (or, from the "Edit" view, just select the "Layout" tab). Ensure that the dialog says that "You are editing the layout for this [Section] Publication content item" and *not* the template for *all* content items.
 
 >**NOTE:** Always check to ensure you're changing the correct layout: editing the *template* for all items of a specific content type can be extremely useful, but it can dramatically change the appearance of an entire content type. Edit layouts with intention and care!
 

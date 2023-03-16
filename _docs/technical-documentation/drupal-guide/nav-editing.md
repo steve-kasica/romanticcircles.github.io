@@ -1,5 +1,5 @@
 ---
-title: Navigation, Menus, & Basic Editing
+title: Admin Menus, Nav, & Basic Editing
 permalink: /docs/nav-editing/
 ---
 
@@ -27,7 +27,7 @@ Let's look at the other tabs to manage content on this page.
 
 **Comments**: The site doesn't allow comments, so there's nothing here.
 
-**Feeds**: This tab manages your active feeds importers. Clicking a feed name or "Import" from the dropdown at right will give you the option to re-import content using the same importer settings, whereas "Edit" will allow you to change the importer's setting to, say, re-use the Praxis HTML importer to import a new volume without having to create a new importer. See the [Drupal Content Import](../drupal-import/) page for instructions on how to import content; see the [Feeds Importers](../feeds-importers/) page later in this section on creating or editing the importers themselves.
+**Feeds**: This tab manages your active feeds importers. Clicking a feed name or "Import" from the dropdown at right will give you the option to re-import content using the same importer settings, whereas "Edit" will allow you to change the importer's setting to, say, re-use the Praxis HTML importer to import a new volume without having to create a new importer. See the [Drupal Content Import](../drupal-import/) page for instructions on how to import content; see the [Feeds Importers](../drupal-feeds/) page later in this section on creating or editing the importers themselves.
 
 **Files**: Contains all files that have been brought into the Drupal site via the feeds or content importers, including media imported via the content editing UI. The page can be useful if you want to see which files aren't being used, but there's not much else to do here.
 
@@ -49,7 +49,7 @@ Structural elements tell Drupal what to do with content and data: how to label a
 
 **Display modes**: This menu can be used to configure custom display modes for forms and views. There's probably not a use case for digging into this functionality, as the defaults are fine.
 
-**Feed types**: Create and edit RC's feeds importers. These importers are complicated and important enough that we've dedicated a whole page to explaining their creation and use: [Feeds Importers](../feeds-importers/). It's important to note, for now, that the feed types created on this page dictate the creation of new feeds importers in admin/content/feed (see "Content," above).
+**Feed types**: Create and edit RC's feeds importers. These importers are complicated and important enough that we've dedicated a whole page to explaining their creation and use: [Feeds Importers](../drupal-feeds/). It's important to note, for now, that the feed types created on this page dictate the creation of new feeds importers in admin/content/feed (see "Content," above).
 
 **Media types**: Configure how Drupal handles uploaded media files (an embedded external video, for instance). Note that the core media module can extract certain kinds of metadata from media sources, if desired (this functionality isn't currently configured on the RC site).
 
@@ -73,7 +73,7 @@ The Extend admin section allows you to view, enable, and configure Drupal's core
 
 Any involved Drupal site will incorporate a large number of modules, and going over the function of each is beyond the scope of the present documentation. The best way to familiarize yourself with what any particular module does is to search the web for it; each will have its own page on the Drupal.org site. For more on modules, see the [Drupal Overview](../drupal-overview/).
 
-From the Extend page, you can also Install a module by checking the box beside it and clicking the "Install" button at bottom. A better term for this process would perhaps be *enable*, since any module you "Install" from the Drupal UI is actually already in the codebase. You **must** "require" any new module in the Drupal codebase using Composer before "installing" it in the Drupal UI. Similarly, you should **never** use the "Uninstall" tab in the Drupal UI: only use Composer to remove modules from your codebase. For more on installing, updating, and deleting modules, see [Using Composer to Manage Drupal](../composer-use/).
+From the Extend page, you can also Install a module by checking the box beside it and clicking the "Install" button at bottom. A better term for this process would perhaps be *enable*, since any module you "Install" from the Drupal UI is actually already in the codebase. You **must** "require" any new module in the Drupal codebase using Composer before "installing" it in the Drupal UI. Similarly, you should **never** use the "Uninstall" tab in the Drupal UI: only use Composer to remove modules from your codebase. For more on installing, updating, and deleting modules, see [Using Composer to Manage Drupal](../composer/).
 
 > **IMPORTANT**: If you do not use Composer to install, uninstall, and update Drupal modules (and core), various dependencies in the site code could be lost, resulting in an unstable site; further, if modules are not installed/removed using Composer, *it may become impossible to update/upgrade to future versions of Drupal without manual intervention in the code*.
 
@@ -111,7 +111,7 @@ From this section, you can manage and add users to the site itself. From the pag
 
 This menu could be useful, in theory, once the site is running smoothly and it's time to sand down the rough edges; you can see the top errors experienced by users, error logs, and even what the site's most commonly searched phrases are. Lists of all fields used on the site and all plugins used in views are also available, which could prove useful in the case of a site audit.
 
-For now, though, the two pages you'll use monthly are the site's *Status report* and its *Available updates*. The former provides a useful site overview: the version of Drupal core the site is running, the PHP version (set by Acquia, per environment), the Database version (updated by settings.php), and any warnings related to the Drupal install (such as deprecations, available updates, and security risks). *Available updates* simply pings Drupal.org to see if any updates are available for Drupal core and all of your modules. Check for available updates at least once a month; once you've updated the site using Composer (using [this guide](../composer-use/)), check the both pages to ensure your update has succeeded and that the correct version numbers are showing up in the Drupal UI.
+For now, though, the two pages you'll use monthly are the site's *Status report* and its *Available updates*. The former provides a useful site overview: the version of Drupal core the site is running, the PHP version (set by Acquia, per environment), the Database version (updated by settings.php), and any warnings related to the Drupal install (such as deprecations, available updates, and security risks). *Available updates* simply pings Drupal.org to see if any updates are available for Drupal core and all of your modules. Check for available updates at least once a month; once you've updated the site using Composer (using [this guide](../composer/)), check the both pages to ensure your update has succeeded and that the correct version numbers are showing up in the Drupal UI.
 
 ---
 

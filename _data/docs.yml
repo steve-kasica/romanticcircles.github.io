@@ -40,12 +40,24 @@ toc:
     docs:
       - page: drupal-overview
         subsection: 
-          - page: admin-menus
-          - page: nav-editing
+          - page: nav-editing 
+          - page: drupal-content
           - page: drupal-components
+          - page: drupal-feeds
+          - page: drupal-views
+          - page: drupal-assets
+          - page: drupal-media-maps
+          - page: drupal-maintenance
       - page: acquia-guide
         subsection: 
+          - page: lamp-stack
+          - page: code-data-file
+          - page: acquia-env
           - page: ssh-keys
+          - page: database
+          - page: composer
+          - page: SSL-cert
+          - page: server-mgmt
       - page: rc-git
         subsection:
           - page: git-install-clone
