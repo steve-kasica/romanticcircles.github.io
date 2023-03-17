@@ -4,19 +4,33 @@ layout: default
 
 <div class="header-container jumbotron">
     <div class="container">
-        <h1>Romantic Circles Site Documentation</h1>
-        <p>An online resource for Romantic Circles technical / assistant editors and 
-            any other fellow travelers in the digital humanities. Feel free to contact the current RC tech editors if you have 
+        <h1>RC site documentation & archive</h1>
+        <p>This site is an online resource for Romantic Circles assistant editors, section editors, contributors, staff, 
+            and—once the RC archives have been populated on this site—researchers in the field of Romanticism.
+            We also welcome fellow travelers in the digital humanities. Feel free to contact the current RC tech editors if you have 
             any questions or comments about the content here.</p>
-        <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | relative_url }}" role="button">RC HANDBOOK</a></p>
+        <div class="row">
+            <div class="col-sm-3">
+                <h3><a class="btn btn-primary btn-block" href="{{ "/docs/home/" | relative_url }}" role="button">rc handbook</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <h3><a class="btn btn-primary btn-block" href="{{ "/docs/prod-schedules/" | relative_url }}" role="button">publication guide</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <h3><a class="btn btn-primary btn-block" href="{{ "/docs/drupal-overview/" | relative_url }}" role="button">tech documentation</a></h3>
+            </div>
+            <div class="col-sm-3">
+                <h3><a class="btn btn-primary btn-block" href="{{ "/docs/rc-contributor-checklist/" | relative_url }}" role="button">contributor resources</a></h3>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h2 class="header-light regular-pad">About RC</h2>
-              <p class="lead">Romantic Circles is a digital humanities platform featuring
+            <h2 class="header-light regular-pad"></h2><br>
+              <p class="lead"><a href="https://romantic-circles.org/">Romantic Circles</a> is a digital humanities platform featuring
                 digital editions of Romantic-era texts, contemporary scholarship, 
                 DH projects, and pedagogy resources. This is RC's documentation
                 site, created to serve as a training, development, and production companion for RC 
@@ -26,11 +40,11 @@ layout: default
         </div>
         <div class="col-md-6 text-center">
             <br><img src="{{ "/assets/img/RC_screenshot.png" | relative_url }}" alt="RC screenshot" class="img-responsive">
-        </div>
+        </div><br>
     </div>
     <hr>
     <div class="container">                
-        <p class="lead">This resource is a static HTML site generated using <a href="https://jekyllrb.com/">Jekyll</a> and 
+        <p class="lead">This resource is a static site generated using <a href="https://jekyllrb.com/">Jekyll</a> and 
         hosted through <a href="https://pages.github.com">GitHub Pages</a>. Jekyll 
         generates HTML pages from a template directory containing raw text in various 
         formats (notably <a href="https://www.markdownguide.org/">Markdown</a> 
@@ -42,24 +56,34 @@ layout: default
     </div>
     <hr>
     <div class="row">
-        <div class="col-sm-4">
-            <h1 class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Easy to install and publish</h3>
-            <p>Get started by cloning source into GitHub account of your project. Thanks to <a href="https://pages.github.com">GitHub Pages</a>,
-              it will be automatically compiled and published under your account's (or organisation's) subdomain under <code>github.io</code>.
+        <div class="col-sm-3">
+            <h1 class="text-center"><i class="fa fa-laptop" aria-hidden="true"></i></h1>
+            <h3 class="text-center">dh publication guide</h3>
+            <p class="text-justify">The <a href="https://romanticcircles.github.io/docs/drupal-overview/">Publication Guide</a> in this documentation provides walkthrough instructions 
+                for RC's digital humanities (DH) publication cycle, which involves TEI encoding, transformation to HTML via XSLT, 
+                and web publication on our Drupal CMS. We've made this guide public in the hope that other DH publications may find it useful.
             </p>
         </div>
-        <div class="col-sm-4">
-            <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Modular Styling and Templating</h3>
-            <p>This template uses <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a> along with <a href="https://bootswatch.com/">Bootwatch themes</a>.
-            You can change the theme or write your custom one by overwriting bootstrap sass variables for a different color set, font options, etc.</p>
+        <div class="col-sm-3">
+            <h1 class="text-center"><i class="fa fa-terminal" aria-hidden="true"></i></h1>
+            <h3 class="text-center">backend guide</h3>
+            <p align="justify">The RC site is a Drupal installation on Acquia, a managed server platform for Drupal sites, and has several 
+                codebases versioned by git. The <a href="https://romanticcircles.github.io/docs/drupal-overview/">technical documentation</a> covers all aspects of developing 
+                and maintaining the Drupal site and its server environments.</p>
         </div>
-        <div class="col-sm-4">
-            <h1 class="text-center"><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Git-based source control</h3>
-            <p>Leverage from Git version control system by
-              maintaining your documentation along with the source code; publish the page when you merge to the master branch.</p>
+        <div class="col-sm-3">
+            <h1 class="text-center"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></h1>
+            <h3 class="text-center">jekyll guide</h3>
+            <p align="justify">This static site is generated by <a href="https://jekyllrb.com/">Jekyll</a> from collections of Markdown files 
+                shaped by simple HTML, CSS, and Liquid. The <a href="https://romanticcircles.github.io/docs/jekyll-github/">Jekyll Guide</a> walks you through installing, 
+                developing, and maintaining a Jekyll site hosted (free!) on GitHub pages (this documentation site). You could even use this guide to 
+                try building your own Jekyll site.</p>
+        </div>
+        <div class="col-sm-3">
+            <h1 class="text-center"><i class="fa fa-archive" aria-hidden="true"></i></h1>
+            <h3 class="text-center">rc content archive</h3>
+            <p align="justify">Upon its migration to Drupal 10, RC decided to archive content produced before the initiative began to encode documents in TEI, 
+                around 2009. The <a href="https://romanticcircles.github.io/archive/">RC Archive</a> will, in time (~2025) house this archived content on this site in Markdown format.</p>
         </div>
     </div>
 </div>
