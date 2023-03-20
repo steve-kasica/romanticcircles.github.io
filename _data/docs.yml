@@ -30,8 +30,8 @@ toc:
       - page: digital-pub-guide
         subsection:
           - page: toc-creation
-          - page: drupal-import
           - page: ftp-upload
+          - page: drupal-import
           - page: media-sourcing
           - page: vol-proofing
       - page: pub-ad
