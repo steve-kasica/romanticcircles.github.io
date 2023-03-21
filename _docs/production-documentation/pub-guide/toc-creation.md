@@ -61,6 +61,8 @@ As shown in the screenshot, find the "views" block called "Editions-toc" (or, fo
 
 Feel free to get creative with the encoding of the TOC, always prioritizing the usability of any layout you decide on. For reference, here's the code for a particularly complicated TOC which can be employed as a template; this HTML produces the TOC for the [*Collected Writings of Robert Bloomfield*](https://www.romantic-circles.org/editions/bloomfield_poems) edition.
 
+> This custom TOC liberally employs Bootstrap components, which are discussed in the [Drupal Assets](../durpal-assets/) documentation. Available Bootstrap components, styles, and plugins, as well as documentation on how to use them, can be found on the [Bootstrap site](https://getbootstrap.com/docs/3.4/). 
+
 -----
 
 ```html

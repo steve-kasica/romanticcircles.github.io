@@ -18,6 +18,8 @@ As noted on previous pages, *modules* are pieces of software that either ship wi
 - **Pathauto**: auto-generates URL aliases for nodes based on configurable patterns.
 - **Views Slideshow**: powers the slideshow functionality on the RC homepage.
 
+Contributed modules must be installed via Composer (dependency manager) and are stored in the site's codebase at `docroot/modules/contrib`. See the [Composer](../composer/) documentation for more information on installing and removing modules.
+
 ## Views
 
 By far the most important and powerful feature provided by Drupal. So much so that it gets its own page. See [using Drupal Views](../drupal-views/).
@@ -30,7 +32,7 @@ For standard production use of the feeds module, see the [Content Import](../dru
 
 Themes control the appearance of Drupal and can be found under the admin "Appearance" tab. Two separate themes are active, or set to "Default," at any time: a standard "front-end" theme, which controls what visitors to the site see, and an "admin" theme, which controls the appearance of the admin UI toolbars and menus.
 
-As of Drupal 9.5, the default themes that ship with core are Olivero (front-end) and Claro (admin). The RC rebuild adopted a robust, well-maintained 3rd-party theme, [DXPR](https://www.drupal.org/project/dxpr_theme), which requires another contributed theme, [Bootstrap](https://www.drupal.org/project/bootstrap) (3), to function. Both contributed themes are updated and maintained through Composer dependencies; for more on Composer and updates, see the [Composer](../composer/) documentation.
+As of Drupal 9.5, the default themes that ship with core are Olivero (front-end) and Claro (admin). The RC rebuild adopted a robust, well-maintained 3rd-party theme, [DXPR](https://www.drupal.org/project/dxpr_theme), which requires another contributed theme, [Bootstrap](https://www.drupal.org/project/bootstrap) (3), to function. Both contributed themes are updated and maintained through Composer dependencies; for more on Composer and updates, see the [Composer](../composer/) documentation. The code for contributed themes can be found in the site's codebase at `docroot/themes/contrib`.
 
 ## Layout Builder, Blocks, Templates
 
