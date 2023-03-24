@@ -9,20 +9,37 @@ RC's Drupal site uses three separate contributed modules to facilitate the impor
 - [**Feeds Extensible Parsers**](https://www.drupal.org/project/feeds_ex) — extends the feeds module to enable the importation of XML documents and, vitally, parse them via XPath.
 - [**Feeds Tamper**](https://www.drupal.org/project/feeds_tamper) — extends the feeds module to enable the transformation of content as part of the import process (e.g., a tamper could perform a search-and-replace on all imported content, removing certain words or tags).
 
+![Screenshot of feeds modules on extend menu](/assets/img/feeds-modules.png)
+
 These three modules work seamlessly together in Drupal's backend to enable you to **create/configure** and then **run** an importer. This technical guide covers the configuration of new or existing importers. If you simply need instructions on importing content using an existing importer, see [Importing Content into the Drupal CMS](../drupal-import/) in the Production Documentation.
 
 ## Creating, configuring, and/or editing importers
 
 Importers can be created and configured from the "Feed types" page under the admin menu's "Structure" tab. From this page, you can create a new feed with "Add feed type" or edit an existing feed.
 
-On each feed type configuration page, you'll see several tabs:
+![Screenshot of feed types page](/assets/img/feed-types.png)
+
+To configure an existing feed, simply click "edit" to go to its config page. On each feed's config page, you'll see several tabs:
+
+![Screenshot of feed page w/ tabs](/assets/img/feed-page.png)
 
 - **Edit** — controls the basic feed configuration. The *fetcher* tells Drupal how the database should fetch your imported file or content (usually an uploaded file or FTP directory). The *parser* selects what method the importer will use to parse imported content. We want to use XPath, so for normal imports this should be "XML." The *processor* tells Drupal how to process the content parsed by the importer; this will usually be "node," meaning Drupal should create a new node for each essay. The *content type* tells the importer what Drupal content type to create nodes/fields for. Each importer can only import into one content type; note that each content type has different possible/associated fields, which affects how content can be imported
   - *Settings*: For RC importers, "Import period" will be set to off (no automatic imports). Under "Fetcher Settings," ensure you set the importer to accept the type of file you're importing and, if appropriate, point it to the right upload directory. Under "Processor settings," almost certainly you'll want to "Insert new content items" and to "Update existing content items."
+
+![Feed edit page screenshot](/assets/img/feed-edit.png)
+
 - **Mapping** — controls the behavior of the parser via Xpath. Set a "Context" for the base query, then select a "Target" field (the choice of fields is determined by the set content type). For each target field, you can configure a "Source" from the imported file(s). For new sources, you'll need to "Configure new XML XPath source"; this is how the parser knows how to find a piece of content by an XML/HTML tag within the imported document. Under configuration, you can tell the parser to treat a field's value as unique (the title will always be unique); set how to reference, or "tie together," fields (usually by Title); and set whether entities should be autocreated (which could be useful if importing taxonomy terms, for instance). To configure XPath sources, you'll likely need the [RC Language Guide](../rc-languages/).
+
+![Screenshot of feed mapping page](/assets/img/feed-mapping.png)
+
 - **Tamper** — for each mapping target, you can set a "tamper" from this page that will alter or change the behavior of the imported content. Simply select "Add plugin" under the appropriate mapping target. An example of a simple tamper used on most importers is a filter to enforce contextual links, stripping the base domain from all imported RC links; to set it up, simply add the "Find replace" plugin, set it to find `https://romantic-circles.org/`, and leave the replacement field blank (which will simply delete the "found" text). You can also use this functionality to, for instance, force the importer to import content with a specific node as parent content (as is necessary, for example, when importing mapping data).
+
+![Feeds tamper page screenshot](/assets/img/feeds-tamper.png)
+
 - **Custom sources** — this is an extremely useful tab that displays all your XPath configurations in a single place and allows you to edit them. Each target label is listed alongside its XPath mapping.
+
 ![Custom Sources screenshot with XPath mappings](/assets/img/Xpath-mapping.png)
+
 - **Manage fields** — can be used to add a new field to the import. Do not use.
 - **Manage form display** — simply configures how information about the importer itself is captured in the database and displayed. No need to use.
 - **Manage display** — controls the UI of the importer, which would be useful for periodic imports and the like. No need to use.

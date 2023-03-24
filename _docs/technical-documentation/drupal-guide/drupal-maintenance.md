@@ -15,12 +15,19 @@ Occasionally you'll need to update the Drupal database, particularly after anyth
 
 ![Screenshot of the update.php page](/assets/img/update-php.png)
 
-Follow the on-screen instructions; if the site is live and you're updating the prod environment, be sure to put it into maintenance mode via the provided link. This will make sure the database isn't corrupted by user queries during the update process, but it also means that the site will go down for a few minutes. For this reason, it's best to execute the update.php script outside of work hours.
+Drupal provides on-screen instructions to execute the script; for specifics, see the step-by-step below. If the site is live and you're updating the prod environment, it's important that you put it into maintenance mode via the provided link. This will make sure the database isn't corrupted by user queries during the update process, but it also means that the site will go down for a few minutes. For this reason, it's best to execute the update.php script outside of work hours.
 
-> **Code backup**: If you've cloned the site's git repo to your local machine, you already *have* a backup of the site code. But you should make sure your local copy is up-to-date with the HEAD of the active production branch before proceeding: simply execute the `git pull` command on the relevant branch, and there you go: a copy of the current site code on your local machine. See the [Git Guide](../rc-git/) for instructions on how to clone the site and execute basic git commands.
-> **Database backup**: As is discussed in the following "backend" section (Acquia) of this documentation, each environment's database is backed up automatically every morning via Acquia. Unless you've made a lot of changes to the site immediately before running update.php, you shouldn't need to create a new backup, though it won't hurt anything to create a new backup via Acquia's cloud interface. See the [Database documentation](../database/) for instructions on how to create database backups — and, if necessary, to restore the database from a backup.
+Here are specific steps to safely execute the `update.php` script.
 
-The update.php script is also executable from the command line via drush (Drupal shell) using the `drush updatedb` command, as discussed in the [Composer documentation](../composer/).
+1. Back up the site code by performing a `$ git pull` on your local repo to ensure you have a copy of the most recent site code on your local machine, just in case. If necessary, read the provided [git guide](../rc-git/) for instructions on how to do so.
+2. Acquia automatically backs up the database for each environment every morning. If you've recently made changes to the site, however, you may want to create a manual database backup using Acquia Cloud Platform (in Environment --> Databases --> "Back Up"). If the update fails, you can restore from here.
+3. Put your site in Maintenance mode (Administration --> Configuration --> Development) if you're in a production environment (i.e., if site visitors could be performing database queries during the update).
+4. Append /update.php to the site's base URL.
+5. Click "Continue." It's possible that no update is possible ("No pending updates"), in which case you can go to step 7.
+6. If there is an update available, run it. If the site crashes or you encounter an error, restore from the most recent database copy in Acquia.
+7. If you put the site into maintenance mode, take it back to production mode.
+
+> **Note**: It's also possible to perform this database update via Drush ("Drupal shell"), Drupal's Linux command line tool (as discussed in the [Composer documentation](../composer/)). If you want to do so, you'll need to put the appropriate environment in "Live Development" mode (from the Overview of any environment in Acquia, simply select Actions / "Enable Live Development"). SSH into the site as described [here](../ssh-keys/). Now navigate to the site's docroot folder: `$ cd ~/docroot` and from there run this command: `$ drush updatedb`. While you're at it, you might as well also run `$ drush cache-rebuild`, which is a good idea every once in a while.
 
 -----
 

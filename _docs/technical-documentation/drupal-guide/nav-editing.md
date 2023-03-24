@@ -5,7 +5,11 @@ permalink: /docs/nav-editing/
 
 This page provides a basic guide to navigating the various menus of the Drupal admin UI, to Drupal's quick edit ("contextual") links, and to the node editing pages used to create and modify content.
 
-The frontend admin UI toolbar will appear once you've logged into Drupal as an admin user (@ romantic-circles.org/login). It consists of the following menus:
+The frontend admin UI toolbar will appear once you've logged into Drupal as an admin user (@ romantic-circles.org/login). 
+
+![Screenshot of admin menu](/assets/img/admin-menus.png)
+
+It consists of the following menus:
 
 ## Top-bar items
 
@@ -23,6 +27,8 @@ The frontend admin UI toolbar will appear once you've logged into Drupal as an a
 
 This section will link you to Drupal's "all content" page, which displays, by default, all site content (nodes) from newest to oldest. Use the provided filters and search bar to sort or find content. The "Action" dropdown can perform bulk operations on selected content (most often, deleting it).
 
+![Screenshot of all content page](/assets/img/content_page.png)
+
 Let's look at the other tabs to manage content on this page.
 
 **Comments**: The site doesn't allow comments, so there's nothing here.
@@ -38,6 +44,8 @@ Let's look at the other tabs to manage content on this page.
 ## Structure
 
 Structural elements tell Drupal what to do with content and data: how to label and organize it, how to display it, how to sort it and retrieve it, how to put several nodes together on a single page, and so on. This menu contains several of the site's most important tools, including **Content Types**, **Feed Types**, **Taxonomy**, and **Views**.
+
+![Screenshot of Structure menu](/assets/img/structure.png)
 
 **Block Layout**: This menu controls the placement of blocks within your Drupal site theme and provides several options to configure them. To see where each of these "block regions" exists within the current theme, click the "Demonstrate block regions" link. You shouldn't have to use this page unless you want to change how these blocks appear (i.e., in the case of a site overhaul).
 
@@ -63,13 +71,17 @@ Structural elements tell Drupal what to do with content and data: how to label a
 
 ## Appearance
 
-This menu controls the site's theme and its settings. From here you can edit the site's color scheme and various options, including Bootstrap functionality. Unless you need to change the site's theme or you're troubleshooting global Bootstrap issues, you shouldn't need this section.
+![Screenshot of appearance menu](/assets/img/appearance_menu.png)
+
+This menu controls the site's theme and its settings. From here you can edit the site's color scheme and various options, including Bootstrap functionality. Unless you need to change the site's theme or you're troubleshooting global Bootstrap issues, you shouldn't need this section. Note that two default themes are set on the site at any given time: a user-facing "front-end" theme (DXPR), and a separate theme for the admin pages (Claro).
 
 ---
 
 ## Extend
 
 The Extend admin section allows you to view, enable, and configure Drupal's core modules (those that "ship" with a standard Drupal install) and any contributed (3rd party) modules you've installed to the site. Many of the configurations available to modules on this page will appear elsewhere on the site---namely, on the "Configuration" admin page---especially if that module's function affects Drupal appearance, settings, or behavior (see, in this regard, the Google Analytics and Colorbox modules). Other modules need to be configured from this page (e.g., Geofield / Leaflet), but you shouldn't need to do this unless you're experiencing issues with a specific module.
+
+![Screenshot of extend page](/assets/img/extend_menu.png)
 
 Any involved Drupal site will incorporate a large number of modules, and going over the function of each is beyond the scope of the present documentation. The best way to familiarize yourself with what any particular module does is to search the web for it; each will have its own page on the Drupal.org site. For more on modules, see the [Drupal Overview](../drupal-overview/).
 
@@ -82,6 +94,8 @@ From the Extend page, you can also Install a module by checking the box beside i
 ## Configuration
 
 The configuration menu is where Drupal aggregates most of its global settings (other than the appearance of the CMS itself, which has its own admin section). Some of these settings have been covered elsewhere in this guide and will be skipped; for those that remain, here's a summary of each of the menu sections and the use of each settings page:
+
+![Screenshot of Configuration menu](/assets/img/config_menu.png)
 
 **System**: Configure site defaults and behaviors, such as the home page, site name, etc., on the *Basic Site Settings* page; the *Cron* page can be used to set up Cron jobs, or scripts that execute on a regular time schedule to automate certain site tasks (such as clearing the cache, etc.).
 
@@ -111,26 +125,18 @@ From this section, you can manage and add users to the site itself. From the pag
 
 This menu could be useful, in theory, once the site is running smoothly and it's time to sand down the rough edges; you can see the top errors experienced by users, error logs, and even what the site's most commonly searched phrases are. Lists of all fields used on the site and all plugins used in views are also available, which could prove useful in the case of a site audit.
 
+![Screenshot of reports menu](/assets/img/reports_menu.png)
+
 For now, though, the two pages you'll use monthly are the site's *Status report* and its *Available updates*. The former provides a useful site overview: the version of Drupal core the site is running, the PHP version (set by Acquia, per environment), the Database version (updated by settings.php), and any warnings related to the Drupal install (such as deprecations, available updates, and security risks). *Available updates* simply pings Drupal.org to see if any updates are available for Drupal core and all of your modules. Check for available updates at least once a month; once you've updated the site using Composer (using [this guide](../composer/)), check the both pages to ensure your update has succeeded and that the correct version numbers are showing up in the Drupal UI.
 
 ---
 
 ## Help
 
-Well, as you might expect, it's not super helpful, but it does provide a list of all the modules the site is running with links to cursory ("readme") documentation for each.
+Well, as you might expect, this menu is not super helpful, but it does provide a list of all the modules the site is running with links to cursory ("readme") documentation for each.
 
 ---
 
 ## The database update UI: update.php
 
-The last necessary element of Drupal's admin UI isn't linked anywhere on the site: a tool to update the site's database. All Drupal documentation you'll find will recommend that you perform this update any time you update Drupal core or any of its modules. Here are the steps to execute this db update:
-
-1. Perform a `$ git pull` on your local repo to ensure you have a copy of the most recent site code on your local machine, just in case.
-2. Acquia automatically backs up the database for each environment every morning. If you've recently made changes to the site, however, you may want to create a manual database backup using Acquia Cloud Platform (in Environment --> Databases --> "Back Up"). If the update fails, you can restore from here.
-3. Put your site in Maintenance mode (Administration --> Configuration --> Development) if you're in a production environment (i.e., if site visitors could be performing database queries during the update).
-4. Append /update.php to the site's base URL.
-5. Click "Continue." It's possible that no update is possible ("No pending updates"), in which case you can go to step 7.
-6. If there is an update available, run it. If the site crashes or you encounter an error, restore from the most recent database copy in Acquia.
-7. If you put the site into maintenance mode, take it back to production mode.
-
->Note: It's also possible to perform this database update via Drush, Drupal's Linux command line tool. If you want to do so, you'll need to put the appropriate environment in "Live Development" mode (from the Overview of any environment in Acquia, simply select Actions / "Enable Live Development"). SSH into the site as described [here](../ssh-keys/). Now navigate to the site's docroot folder: `$ cd ~/docroot` and from there run this command: `$ drush updatedb`. While you're at it, you might as well also run `$ drush cache-rebuild`, which is a good idea every once in a while.
+The last necessary element of Drupal's admin UI isn't linked anywhere on the site: a tool to update the site's database. All Drupal documentation you'll find will recommend that you perform this update any time you update Drupal core or any of its modules. Instructions on execcuting a database update with this tool are covered in the [Drupal UI Maintenance](../drupal-maintenance/) documentation.

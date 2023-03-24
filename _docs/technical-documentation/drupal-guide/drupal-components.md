@@ -20,19 +20,27 @@ As noted on previous pages, *modules* are pieces of software that either ship wi
 
 Contributed modules must be installed via Composer (dependency manager) and are stored in the site's codebase at `docroot/modules/contrib`. See the [Composer](../composer/) documentation for more information on installing and removing modules.
 
+-----
+
 ## Views
 
 By far the most important and powerful feature provided by Drupal. So much so that it gets its own page. See [using Drupal Views](../drupal-views/).
 
+-----
+
 ## Feeds
 
 For standard production use of the feeds module, see the [Content Import](../drupal-import/) guide in the Production Documentation. For instructions on how to configure a new feed and/or edit an existing feed, see the [Drupal Feeds](../drupal-feeds/) guide that follows.
+
+-----
 
 ## Themes
 
 Themes control the appearance of Drupal and can be found under the admin "Appearance" tab. Two separate themes are active, or set to "Default," at any time: a standard "front-end" theme, which controls what visitors to the site see, and an "admin" theme, which controls the appearance of the admin UI toolbars and menus.
 
 As of Drupal 9.5, the default themes that ship with core are Olivero (front-end) and Claro (admin). The RC rebuild adopted a robust, well-maintained 3rd-party theme, [DXPR](https://www.drupal.org/project/dxpr_theme), which requires another contributed theme, [Bootstrap](https://www.drupal.org/project/bootstrap) (3), to function. Both contributed themes are updated and maintained through Composer dependencies; for more on Composer and updates, see the [Composer](../composer/) documentation. The code for contributed themes can be found in the site's codebase at `docroot/themes/contrib`.
+
+-----
 
 ## Layout Builder, Blocks, Templates
 
@@ -46,7 +54,13 @@ The functionality of Layout Builder is surprisingly intuitive; the best way to f
 
 **Templates**. Layout Builder allows the building of templates that are applied to all new nodes of a certain content type; for example, all new "Praxis Publication" (index) pages default to a template that includes a Block that displays a View to auto-generate that volume's TOC from the titles of all essay nodes that designate the TOC page's node number as their "parent volume." Fortunately, the Template Builder defaults to editing only the page layout at hand. To edit the template for *all* nodes of a content type, click "Edit the template for all" option that appears when you open Layout Builder (by clicking "Layout" on a node).
 
-> We've extended through a contributed module to add CSS classes to any layout element; see [Layout Builder Styles](https://www.drupal.org/project/layout_builder_styles) module documentation. When you configure a Block using Layout Builder, you'll see style options with selector boxes; each corresponds to a CSS class or classes. To inspect these existing CSS block styles, or to add your own, navigate to Configuration / Layout Builder Styles. In the "CSS Classes" configuration box, you'll just add the *name* of a class; you then have to add that class to a CSS injector (Configuration / Asset Injector / CSS) and define it. See the [Assets](../drupal-assets/) section for using the Asset Injectors.
+> We've extended through a contributed module to add CSS classes to any layout element; see [Layout Builder Styles](https://www.drupal.org/project/layout_builder_styles) module documentation. When you configure a Block using Layout Builder, you'll see style options with selector boxes; each corresponds to a CSS class or classes. To inspect these existing CSS block styles, or to add your own, navigate to `Configuration / Layout Builder Styles`. In the "CSS Classes" configuration box, you'll just add the *name* of a class; you then have to add that class to a CSS injector (`Configuration / Asset Injector / CSS`) and define it. See the [Assets](../drupal-assets/) section for using the Asset Injectors. The first image below shows the "Styles" options that appear when you "Configure" a block from the Layout Builder; the second image shows the admin page to configure the styles via a simple CSS class name.
+
+![Screenshot of layout builder config w/ styles](/assets/img/layout-styles.png)
+
+![Screenshot of config page for layout builder styles modules](/assets/img/layout-builder-styles.png)
+
+-----
 
 ## Taxonomy
 
