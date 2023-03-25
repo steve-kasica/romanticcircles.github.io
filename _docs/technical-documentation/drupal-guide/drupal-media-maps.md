@@ -80,6 +80,8 @@ Note that the current path configuration means that any taxonomy term or contrib
 
 ## Mapping: Leaflet & Geofield modules
 
+> We highly recommend you read all of the preceding Drupal documentation as a prerequisite to this section.
+
 Like the site's Colorbox functionality, RC's mapping capabilities are enabled by a suite of contributed modules:
 
 - **Leaflet** — the main mapping module; it ports the [Leaflet JavaScript mapping library](https://leafletjs.com/) into Drupal.
@@ -90,4 +92,46 @@ Like the site's Colorbox functionality, RC's mapping capabilities are enabled by
 
 > **Note**: Because the "Markercluster" and "Views" submodules described above are submodules of the main Leaflet module (generally meaning they were originally developed as separate modules and then merged into the development of the main module's code), they will not appear as individual entities required in Composer's `composer.json` file. Rest assured that their dependencies and updates are still tied to your overall Drupal installation through the main Leaflet module. See the [Composer documentation](../composer/) for more info.
 
-The creation of a map on the site incorporates basically every element of Drupal this documentation has covered thus far. Thus a walkthrough of this process is in order, as it also serves as a concrete illustration of many of the principles we've been discussing over these many pages.
+The creation of a map on the site incorporates basically every element of Drupal this documentation has covered thus far. Thus a walkthrough of this process is in order, as it also serves as a concrete illustration of many of the principles we've been discussing over these many pages. It may be helpful to begin by outlining the logics that leverage different Drupal components and functions to successfully produce a map.
+
+### Mapping logics: Content type + taxonomy vocabulary + entity references + feeds importers + views
+
+The elements/entities necessary to produce a Leaflet map on the RC site are as follows:
+
+- **NODES of the "landmark" content type.** The landmark node holds the geofield data for each place on the map. Its field configuration is quite simple: you can give the place a name ("landmarkTitleField"), a description ("Description"), and latitude and longitude coordinates ("Location").
+  - *Vitally*, the landmark field can also accept two entity reference fields: the "Place Anchor Tag" and the "Parent Resource." The latter is rather self-explanatory: the parent resource field should hold the main parent page (TOC/index page) for the edition/volume the map belongs to. The "Place Anchor Tag" field will hold the *landmark* node's equivalent *taxonomy term*.
+- **TERMS belonging to the "places" taxonomy vocabulary.** For each "landmark" location, a taxonomy term of the same name will be imported alongside the landmark title and other fields, into the "Place Anchor Tag" field. This is an entity reference field that links the landmark node to the place's taxonomy term. This *same* term can be referenced by any other content on the site, usually by a "Places mentioned on this page" field on an "Editions article" node.
+- **FEEDS are used to auto-populate all these fields.** As described in the [Feeds Importer](../drupal-feeds/) technical documentation and the [Content Import](../drupal-import/) production documentation, the feeds importers can be configured to parse (via XPath) XML documents and retrieve data. RC uses feeds importers to populate all the fields mentioned above from TEI files. For all the importer logics that go into building a complex mapping ecosystem in Drupal, see the configuration of the "Landmark Importer" and the "Place Taxonomy Importer" at `Structure / Feed Types`.
+  - For the importer used to populate the terms on an "Editions article" content type, also see, e.g., the "Southey Letters Importer."
+- **ENTITY REFERENCES tie everything together.** The "Place Anchor Tag" entity reference field on the "landmark" node and the "places mentioned" entity reference field on the "Editions article" node allow each term in the "Places" vocabulary to generate a list of *every* entity reference across the site that points to this particular term. Drupal's Taxonomy system does this automaticaly; if you click on a term, it will list its appearances everywhere on the site. This functionality can be leveraged through views.
+- **VIEWS are used to present all the data on Leaflet's mapping interface.** By choosing to output a view's query as a "Leaflet Map" format and pulling in the relevant geolocation fields, you can generate a Leaflet map.
+
+### Leaflet mapping walkthrough
+
+Once you understand the content logics outlined above, the steps required to build a Leaflet map should make sense.
+
+**Import content / geolocation data into the "landmark" content type.**
+
+- All "place" entries for a given project should be provided in a single XML (TEI) file, usually called `places.xml` or similar. This file normally will contain a series of hierarchically parallel XML tags that provide various datapoints about the place, a place name and lat/long coordinates at minimum. Usually you'll see a description and ID (xml:id) as well.
+- *Import taxonomy terms.* Navigate to `Content / Feeds` and edit the **Place Taxonomy Importer**. Upload your XML file and run the import.
+  - This importer extracts the "ID" name for each place and turns it into a taxonomy term (the term will automatically be created upon import). This taxonomy term "logs" every time the term appears in any entity reference field across the site and can display all references to each location.
+  - If the import fails, it probably means that your XML file doesn't conform to the conventions outlined in our [TEI guidelines](../tei-walkthrough/). You have two options: modify the XML via find-and-replace queries, or edit the importer's parsing configuration. The latter is usually far less time consuming. See the [Feeds documentation](../drupal-feeds/) and XPath tips in the [RC Languages Guide](../rc-languages/) for how to do so. *Make sure you write down the previous configuration and return the feed to its defaults once you're done.*
+- *Change the parent resource for the place node import.* Next, import the actual content for each place. Navigate to `Structure / Feed types` and edit the **Landmark Importer**. In the "Tamper" tab, edit the plugin value assigned to the "Placeholder -> Parent Resource: target_id" mapping (at the bottom of the page, click "edit" next to the "Set value or default value" plugin). Change the value to the node ID or *exact name* of the parent volume and **save** the feed type. (To find the node ID, simply navigate to the edition's TOC page and hover your mouse over the "edit" tab; the node ID number will appear in the URL at the bottom left corner of the browser.)
+- *Import place nodes.* Finally, navigate back to `Content / Feeds` and edit the **Landmark Importer** to upload the *same* `places.xml` file you just used to import the taxonomy terms. Run the importer. This creates and populates the actual place nodes, including the place name, description, taxonomy entity reference, and, vitally, each place's lat/long coordinates.
+
+**Build the map as a view.**
+
+- Navigate to `Structure / Views` and create a new view. Give the view a meaningful name.
+- Under "View settings," set it to show **Content** of type **Landmark.**
+- Under "Page settings," check "Create a page" (to set the display to "page" instead of "block"). Set the page title as appropriate and give it a relative path inside its parent volume (e.g., /editions/southey_letters/places-map).
+- Click "Save and edit." This will take you to the proper views interface.
+- The first item in the "Fields" section should be “Content: Location”. If necessary, remove an element and then add the "Content: Location" field by searching for it. Probably you'll want to pull in the place title as well; add the field "Content: Title" and check "Link to the content" from the options (when you click on the field name).
+- Add a filter to the view: "Parent resource is equal to [node ID]." You'll need to provide the 6-digit node id for your map's parent resource; see the importation guide just above for how to find it.
+- In the "Format" section, click the "Settings" option next to "Fields." Check the box next to "Content: Location" to set it as an inline field.
+- Save the view. You should see the Leaflet map populate in the "Preview" section, and the link created by the view should work. Congrats!
+
+### Advanced options
+
+**Map Layers**: Navigate to `Structure / Leaflet Layers` there is an option for map layers. If your project requires (often historical) map overlays over the standard Leaflet map, you create them here. To import a map layer for use by Leaflet, you'll first need to convert the scanned image of the map — preferably a high-res IIIF-compatible image file — into XYZ map tiles. There are several online services that will do this for you; see, e.g., [Allmaps](https://observablehq.com/@allmaps/allmaps-tile-server). Once you have folders of XYZ tiles, you'll upload them to the SFTP and then point the Leaflet map tile configuration to that file location as a relative URL (/sites/default/files/...). The best way to figure this out will be to examine the configuration of map layers that already exist on the site; for an example of a Leaflet map with layer overlays, see the [Guide to the Lakes map](https://romantic-circles.org/editions/guide_lakes/places-map).
+
+**Map Bundles**: To include specific map overlays in a final Drupal map (view), a map bundle must be made. Under `Structure / Leaflet layers / Map bundles`, you can create a bundle which lets you select which maps you want to include and which you want to be enabled/disabled by default. To enable a bundle on a specific map (or to enable a single layer, if that's all you need), edit the view responsible for outputting the map and click "Settings" next to "Leaflet Map" under the "Format" section. From this dialog, select the bundle you just created from the "Leaflet Map Tiles Layer" field. You should now see the "Layers" tooltip in the top-right of the resulting Leaflet map; hopefully all layers you put into the bundle show up correctly! (If they don't, try a different XYZ map tile creator and re-create the layers.)
