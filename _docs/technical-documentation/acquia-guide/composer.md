@@ -3,8 +3,6 @@ title: Composer — Updating & Maintaining the Site
 permalink: /docs/composer/
 ---
 
-# Composer — Updating & Maintaining the Site
-
 This page provides an high-level overview of using Composer to maintain the website by updating and installing Drupal modules.
 
 ## About Composer
@@ -56,7 +54,7 @@ In order to add a new Drupal module to the website, use the [`require` command](
 
 ![An example of a install snippet for ctools](assets/img/ctools-install.png)
 
-*Note: In addition to installing module code via Composer, you may need to provide additional install steps for Drupal via the admin panels in the CMS. See the [Drupal maintenance documentation](../drupal-guide/drupal-maintenance.md)*
+*Note: In addition to installing module code via Composer, you may need to provide additional install steps for Drupal via the admin panels in the CMS. See the [Drupal maintenance documentation](../docs/drupal-maintenance)*
 
 ## Updating Drupal modules
 
@@ -67,7 +65,7 @@ If you are attempting to update a Drupal module beyond the version specified in 
 ### Updating transitive dependencies
 If you need to update a transitive dependency, first see if an associated direct dependency also needs to be updated first. Updating the direct dependency may also update the out-of-date transitive dependency. To see which packages depend upon a specific package use `composer why`, e.g. `composer why sebastian/diff` will show which modules require [sebastian/diff](https://packagist.org/packages/sebastian/diff). When updating a transitive dependency, you should not need to use the `require` command, only `upgrade`.
 
-*Note: In addition to updating any module via Composer, you may need to provide additional install steps for Drupal via the admin panels in the CMS, such as database updates. See the [Drupal maintenance documentation](../drupal-guide/drupal-maintenance.md).*
+*Note: In addition to updating any module via Composer, you may need to provide additional install steps for Drupal via the admin panels in the CMS, such as database updates. See the [Drupal maintenance documentation](../docs/drupal-maintenance).*
 
 ## Further reading
 You can, and should, learn more about using Composer to update Drupal modules from these resources:

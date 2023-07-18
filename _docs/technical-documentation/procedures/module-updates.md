@@ -1,24 +1,20 @@
 ---
-title: Module update procedure
+title: Module Update Procedure
 permalink: /docs/module-update-procedure/
 ---
 
 <style>
    h4 > input {
-      margin-left: -25px;
-      margin-right: 10px;
+      margin-left: -25px !important;
+      margin-right: 10px !important;
    }
 </style>
 
-# Module Update Procedure
-
-This page provides a step-by-step guide to updating Drupal modules, both core and contributed. It will require to you use the Terminal and Git.
-
-These steps must be done in order. You can click the checkboxes next to the headings of each step to mark your progress in completing each step.
+This page provides a step-by-step guide to updating Drupal modules, both core and contributed. It will require to you use the Terminal and Git. These steps must be done in order. You can click the checkboxes next to the headings of each step to mark your progress in completing each step.
 
 <h4><input type="checkbox">Check for module updates</h4>
 
-The first step is to see what updates are available for the modules currently installed on the site. There are two ways to check for updates: the [Available Updates report](http://romanticcircleswacbczpuai.devcloud.acquia-sites.com/admin/reports/updates) and the terminal via Composer, see [Composer documentation](../composer.md#checking-module-versions) for differences between the two methods.
+The first step is to see what updates are available for the modules currently installed on the site. There are two ways to check for updates: the [Available Updates report](http://romanticcircleswacbczpuai.devcloud.acquia-sites.com/admin/reports/updates) and the terminal via Composer, see [Composer documentation](../composer#checking-module-versions) for differences between the two methods.
 
 <h4><input type="checkbox">Download the latest repository code</h4>
 
@@ -51,13 +47,13 @@ After you get a confirmation message that the code has been switched. Now is a g
 
 <h4><input type="checkbox">Check for database updates</h4>
 
-Sometimes, an update to a module also requires an update to the database. Some modules may store information in the same database where website content is stored. To check for databse updates, follow the steps at [`update.php`](http://romanticcircleswacbczpuai.devcloud.acquia-sites.com/update.php). See documentation on [Drupal maintenance](../docs/drupal-maintenance#updatephp) for more details. Be sure to create a backup of the database before implementing database updates. Not all module updates will require database changes.
+Sometimes, an update to a module also requires an update to the database. Some modules may store information in the same database where website content is stored. To check for databse updates, follow the steps at [`update.php`](http://romanticcircleswacbczpuai.devcloud.acquia-sites.com/update.php). See documentation on [Drupal maintenance](../drupal-maintenance#updatephp) for more details. Be sure to create a backup of the database before implementing database updates. Not all module updates will require database changes.
 
 **Reverting from errors**: If updating the database introduces an error, you can revert the website back to the last stable version by swapping the database to the recently created backup.
 
 <h4><input type="checkbox">Check website for errors</h4>
 
-After you get a confirmation message that the database has been updated, check the website for errors, and check that the module version is up-to-date in the Updates Report ([/admin/reports/updates](http://romanticcircleswacbczpuai.devcloud.acquia-sites.com/admin/reports/updates)).
+After you get a confirmation message that the database has been updated, check the website for errors, and check that the module version is up-to-date in the Updates Report ([admin/reports/updates](http://romanticcircleswacbczpuai.devcloud.acquia-sites.com/admin/reports/updates)).
 
 <h4><input type="checkbox">Merge new branch with master branch</h4>
 
