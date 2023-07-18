@@ -3,6 +3,8 @@ title: Using Git—An Overview
 permalink: /docs/git-guide/
 ---
 
+## Background
+
 As you begin working with git, it will be helpful to understand the basics of what git does behind the scenes as well as a list of basic git commands. Most basically, git is a bit of software that can live inside any of the folders on your computer to make sure they stay synchronized with your team members' folders anywhere in the world. This is, as you'd imagine, incredibly helpful when you're working on a complex site or application with a bunch of other people. After working through this guide, you should be able to perform a basic git workflow as well as troubleshoot common problems.
 
 > Always remember: if you run into anything that looks scary or throws back an error message, Google it! Someone on StackExchange, or even Reddit, has the solution to your problem (or, as has been the case for me far too many times, a way out of a stupid situation you've put yourself in).
