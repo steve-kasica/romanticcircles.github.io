@@ -103,4 +103,6 @@ More advanced commands & undo options (use with caution!):
 - `$ git reset`: this powerful command moves the HEAD and branch refs to a specific commit, essentially allowing you to "rewind" the history and start over from a specific commit. Usually used with the flag `--hard` to scrub all changes and history back to a previous commit. Without pointing to a commit hash or file, it resets to the most recent commit. This is a destructive command that can lead to changes that cannot be undone; read [this documentation](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset) in full before you use it.
   - Use `$ git reset --hard` as often as you need! It will erase everything you've done since the last commit and return your local repo to that state. This can be *quite* useful.
 
-If you'd like to learn more about git, [Atlassian has a fantastic in-depth tutorial](https://www.atlassian.com/git/tutorials/what-is-version-control) that expands on this guide & digs into some more advanced functions.
+### Further reading:
+* If you'd like to learn more about git, [Atlassian has a fantastic in-depth tutorial](https://www.atlassian.com/git/tutorials/what-is-version-control) that expands on this guide & digs into some more advanced functions.
+* [Git Essential Training (video)](https://www.linkedin.com/learning/git-essential-training-19417064/get-started-with-git?u=109339402) on LinkedIn Learning.
