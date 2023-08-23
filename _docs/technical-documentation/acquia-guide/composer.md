@@ -3,7 +3,7 @@ title: Composer — Updating & Maintaining the Site
 permalink: /docs/composer/
 ---
 
-This page provides an high-level overview of using Composer to maintain the website by updating and installing Drupal modules.
+This page provides an high-level overview of using Composer to maintain the website by updating and installing Drupal modules. Also see ["Module Update Procedure"](/docs/module-update-procedure) for a step-by-step guide to updating modules.
 
 ## About Composer
 

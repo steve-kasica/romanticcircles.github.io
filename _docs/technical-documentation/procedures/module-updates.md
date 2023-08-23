@@ -55,6 +55,10 @@ Sometimes, an update to a module also requires an update to the database. Some m
 
 After you get a confirmation message that the database has been updated, check the website for errors, and check that the module version is up-to-date in the Updates Report ([admin/reports/updates](http://romanticcircleswacbczpuai.devcloud.acquia-sites.com/admin/reports/updates)).
 
+<h4><input type="checkbox">Clear caches</h4>
+
+After you perform the update, you may also need to "Clear all caches," in drupal (found under [Home > Administration > Configuration > Development](http://romanticcircleswacbczpuai.devcloud.acquia-sites.com/admin/config/development/performance)).
+
 <h4><input type="checkbox">Merge new branch with master branch</h4>
 
 If all changes have been successful, then we merge the new branch into the master branch.
