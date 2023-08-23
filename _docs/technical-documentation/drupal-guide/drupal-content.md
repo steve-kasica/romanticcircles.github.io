@@ -67,6 +67,45 @@ Upon creation, each node is assigned a *node ID* by Drupal. This is a unique 6-d
 
 -----
 
+## Content types
+The website has more than 30 different content types, pre-defined collection of data types (fields). The list below maps the human-readable names with their machine names for reference.
+
+| Content Name			   				    | Machine Name		 					|
+| ========================================= | ===================================== |
+| About Search People						| `about_people_search` 				|
+| Article					 				| `articles`							|
+| Basic Page		 		 				| `page` 								|
+| Contributor		 		 				| `about_person`						|
+| Editions Article		   				    | `editions_article`					|
+| Editions Publication	   				    | `editions_publication`				|
+| Gallery Exhibit							| `gallery_exhibit`	 			    	|
+| Gallery Explore		   				    | `gallery_all`		 			    	|
+| Gallery Item			   				    | `gallery_item`						|
+| home 										| `home` 								|
+| Lab Home 									| `lab_home`							|
+| Lab Poets on Poets Article 				| `lab_poets_on_poets_article` 			|
+| Lab Pop Culture Article					| `lab_pop_culture_article` 			|
+| landmark 									| `landmark`							|
+| MapOverlayImage							| `mapoverlayimage` 					|
+| Other Digital Humanities Article 			| `other_digital_humanities_article`	|
+| Other Digital Humanities Publication 		| `other_digital_humanities_publica` 	|
+| Pedagogies Articles 						| `pedagogies_article` 					|
+| Pedagogies Publication 					| `pedagogies_publication` 				|
+| Person 									| `person`								|
+| Praxis Essay 								| `praxis_article`						|
+| Praxis Publication 						| `praxis_page` 						|
+| Primary Authors 							| `primary_author`						|
+| Reviews and Resources Booklist 			| `r_r_booklist` 						|
+| Reviews and Resources Booklist Explore	| `r_r_booklists` 						|
+| Reviews and Resources Book Review 		| `reviews_and_resources_review`		|
+| Reviews and Resources Conference Reviews 	| `reviews_and_resources_conference` 	|
+| Reviews and Resources Timeline 			| `r_r_timeline`						|
+| Section Home Page							| `basic_home` 							|
+| Teaching Edition 							| `teaching_edition` 					|
+| Unbounded Article 						| `unbound_article` 					|
+| Unbounded Publication 					| `unbound_publication` 				|
+ 
+
 ## Taxonomy terms
 
 *Terms* in the taxonomy system are parallel to content nodes, and like nodes they generate their own unique pages on the site. Unlike nodes, however, terms generally act as *concepts* rather than *content*: a taxonomy term like "aesthetics," for example, serves as a tag that can be placed into the "Tag" field of any content node on the site. A term's page, which can be accessed from the vocabulary that "holds" it in the admin UI (`Structure / Taxonomy / List terms (on vocab) / Edit (on term)`), will simply display all pages on the site that are also tagged with that term:
@@ -128,7 +167,7 @@ First, a pure CSS method of rendering tooltips appears in two contexts on the si
 
 <p><strong>Praxis essay footnotes</strong>: Footnotes to Praxis essays are displayed when using a different CSS rule that employs the same method, e.g. <a href="https://romanticcircleswacbczpuai.devcloud.acquia-sites.com/praxis/bowie/praxis.2022.bowie.jackson.html">"What We Talk About When We Talk About Bowie: David Bowie and Enlightenment Philosophies of Identity"</a>. Code for this CSS tooltip exists in `citation_popup.css`, supplied via the Asset Injector module.</p>
 <img src="/assets/img/css-tooltip.png">
-<p style="font-size:0.75em; text-align:center">A pure CSS tooltip displays an annotation to a Praxis essay when the user hovers over the superscript footnote.</p>        
+<p style="font-size:0.75em; text-align:center">A pure CSS tooltip displays an annotation to a Praxis essay when the user hovers over the superscript footnote.</p>		
 <br>
 
 The second method for displaying annotations uses CSS and JavaScript to render content asynchronously via a AJAX dialog box. This method is employed in editions article body content. These modal windows are triggered when the user clicks on a hyperlink enclosing a bit of text. The annotation content is stored in the database under a specific content type, `node_as_note`. This method is effective when there are many, many annotations. In Frankenstein, there are more than 1,000 annotations. Thus, an on-demand, asynchronous approach is the appropriate strategy. Loading all annotations upon the initial page request significantly slows the page render time. 
